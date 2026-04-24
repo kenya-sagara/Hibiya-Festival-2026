@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "HIBIYA LIVE FESTIVAL 2026",
-    "url": "https://kenya-sagara.github.io/Hibiya-Festival-2026",
+    "url": "https://hibiya-festival.artistmerge.jp",
     "description": "2026.5.16 SAT – 5.17 SUN ｜ 日比谷ステップ広場 ／ HIBIYA FOOD HALL ／ 日比谷OKUROJI ｜ 入場無料"
   },
   "artists": [
@@ -47,10 +47,10 @@
     },
     {
       "slug": "albarino-budoukei-21",
-      "name": "Albariño 葡萄系ビッグバンド第21弾",
-      "photo": null,
+      "name": "Albariño 〜葡萄系ビッグバンド第21弾〜",
+      "photo": "albarino-budoukei-21.jpg",
       "tags": ["ビッグバンド", "葡萄系"],
-      "desc": "",
+      "desc": "ワイン好きのリーダーが葡萄品種をバンド名にして作る21個目のバンド。Albariño（アルバリーニョ）はスペイン生まれの白ブドウ。柑橘や青リンゴみたいに爽やかで、海に合うすっきり系白ワイン代表。すっきり爽やかな演奏をお届けします！ 2027年1/30に、日比谷ミッドタウンフードホールで演奏予定。",
       "slots": [
         { "venue": "日比谷ステップ広場", "day": "5.16 SAT", "time": "17:00", "end": "17:45" }
       ]
@@ -87,10 +87,10 @@
     },
     {
       "slug": "barbera-budoukei-22",
-      "name": "Barbera 葡萄系ビッグバンド第22弾",
-      "photo": null,
+      "name": "Barbera 〜葡萄系ビッグバンド第22弾〜",
+      "photo": "barbera-budoukei-22.jpg",
       "tags": ["ビッグバンド", "葡萄系"],
-      "desc": "",
+      "desc": "ワイン好きのリーダーが葡萄品種をバンド名にして作る22個目のバンド。Barbera（バルベーラ）はイタリア・ピエモンテ州原産。明るい酸味と果実味が魅力で、チェリーのようにフレッシュで、重すぎない軽やか系赤ワイン。演奏もそこを目指します！この夏8/29に、日比谷ミッドタウンフードホールで演奏予定。",
       "slots": [
         { "venue": "日比谷ステップ広場", "day": "5.17 SUN", "time": "15:00", "end": "15:45" }
       ]
@@ -139,11 +139,11 @@
       ]
     },
     {
-      "slug": "matsuzaka-quintet",
-      "name": "松坂光輝 Quintet",
-      "photo": null,
-      "tags": ["クインテット"],
-      "desc": "",
+      "slug": "axis-quintet",
+      "name": "Axis Quintet（アクシス・クインテット）",
+      "photo": "axis-quintet.jpg",
+      "tags": ["クインテット", "ジャズ"],
+      "desc": "Seiko Summer Jazz Campでヤマハ賞を受賞した龍野日菜子(tp)、浅草ジャズコンテストでベストプレーヤー賞を受賞した松下美月(ts)をフロントに、松坂光輝(p)、大参泰平(b)、後藤龍太郎(ds)が強固なグルーヴを構築。スウィングから現代的アプローチまで自在に行き来し、都内を中心に活動中。",
       "slots": [
         { "venue": "HIBIYA FOOD HALL", "day": "5.16 SAT", "time": "18:00", "end": "18:45" }
       ]

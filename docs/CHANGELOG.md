@@ -2,6 +2,22 @@
 
 本ファイルは HIBIYA LIVE FESTIVAL 2026 サイトの変更履歴を記録します。
 
+## 2026-04-25
+
+### 追加
+
+- **独自ドメイン**：`https://hibiya-festival.artistmerge.jp` で公開開始
+  - リポジトリ直下に `CNAME` ファイルを配置
+  - `data/artists.json` の `site.url` を更新し、全アーティスト専用ページのOGP絶対URLを新ドメインに切替
+- **Axis Quintet（アクシス・クインテット）** を新規追加（5/16 HIBIYA FOOD HALL 18:00 枠、旧「松坂光輝 Quintet」を差し替え）
+- **Albariño 〜葡萄系ビッグバンド第21弾〜** / **Barbera 〜葡萄系ビッグバンド第22弾〜** のプロフィール・写真を追加
+- 写真：`axis-quintet.jpg` / `albarino-budoukei-21.jpg` / `barbera-budoukei-22.jpg` の3点追加
+
+### 変更
+
+- 既存の17点の写真は差分なし（更新版ZIPを取り込み、内容同一を確認）
+- Albariño / Barbera の表記を「〜葡萄系…〜」の波括弧付きに統一（Excel表記に合わせ）
+
 ## 2026-04-24
 
 ### 追加
