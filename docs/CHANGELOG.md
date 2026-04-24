@@ -4,6 +4,16 @@
 
 ## 2026-04-25
 
+### 追加（SNSシェア最適化）
+
+- **写真の最適化**を実施：全アーティスト写真を最大辺1600px・JPEG quality 85 で再生成し、EXIF回転も適用
+  - After5 Lab Band が 41MB → 297KB まで縮小（クローラーのタイムアウト・失敗を防止）
+  - TamiKiyo / TamiKiyo & Friends の PNG を JPEG に変換（775KB→52KB / 1.5MB→111KB）
+  - `data/artists.json` に `photo_width` / `photo_height` を保存
+- 全アーティスト専用ページと `index.html` の OGP に **`og:image:width` / `og:image:height` / `og:image:alt` / `og:image:secure_url`** を追加
+- **サイト共通の OGP 画像** `assets/ogp.jpg`（1200×630）を自動生成（`scripts/gen_site_ogp.py`）し、`index.html` に Twitter Card / OGP を完備
+  - トップページのSNSシェアでもイベントタイトル＋日程＋会場が映えるカードが出るように
+
 ### 追加（続）
 
 - Good Neighbors Big Band のプロフィールと写真を追加（2018年結成、看板ボーカリストとの100曲超レパートリーを紹介）

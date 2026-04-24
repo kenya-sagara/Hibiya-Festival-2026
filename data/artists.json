@@ -9,245 +9,488 @@
       "slug": "meiji-bsso",
       "name": "明治大学 Big Sounds Society Orchestra",
       "photo": "meiji-bsso.jpg",
-      "tags": ["ビッグバンド", "大学"],
+      "tags": [
+        "ビッグバンド",
+        "大学"
+      ],
       "desc": "1961年に設立の明治大学公認ビッグバンドジャズサークル。数々のコンテストで実績を残し、国内外のミュージシャンとの共演も果たしている。カウント・ベイシーやグレン・ミラーなどのスウィング・ナンバーを軸に演奏活動を展開し、プロミュージシャンも多く輩出している。",
       "slots": [
-        { "venue": "日比谷ステップ広場", "day": "5.16 SAT", "time": "13:00", "end": "13:45" }
-      ]
+        {
+          "venue": "日比谷ステップ広場",
+          "day": "5.16 SAT",
+          "time": "13:00",
+          "end": "13:45"
+        }
+      ],
+      "photo_width": 1488,
+      "photo_height": 1100
     },
     {
       "slug": "good-neighbors-big-band",
       "name": "Good Neighbors Big Band",
       "photo": "good-neighbors-big-band.jpg",
-      "tags": ["ビッグバンド", "ヴォーカル"],
+      "tags": [
+        "ビッグバンド",
+        "ヴォーカル"
+      ],
       "desc": "2018年結成。ビッグバンドファンの裾野を広げるべく、ライブハウスや各種イベント、レストランなどで数多くのステージに出演。看板ボーカリストとともに、古き良き時代のシナトラサウンドからモダンなアプローチまで、100曲を超えるレパートリーでビッグバンドの魅力をわかりやすく発信していきます。",
       "slots": [
-        { "venue": "日比谷ステップ広場", "day": "5.16 SAT", "time": "14:00", "end": "14:45" }
-      ]
+        {
+          "venue": "日比谷ステップ広場",
+          "day": "5.16 SAT",
+          "time": "14:00",
+          "end": "14:45"
+        }
+      ],
+      "photo_width": 1600,
+      "photo_height": 777
     },
     {
       "slug": "next-triad-big-band",
       "name": "Next-Triad Big Band",
       "photo": "next-triad-big-band.jpg",
-      "tags": ["ビッグバンド"],
+      "tags": [
+        "ビッグバンド"
+      ],
       "desc": "Next-Triad Big Bandは東京で活動する2015年結成のビッグバンド。20代から60代までの幅広い世代が集い、全曲メンバーによるオリジナルと独自アレンジで構成。1970〜80年代のサウンドカラーを軸に、個性あふれるソリストによるアドリブとインタープレイが魅力。日比谷ライブフェスティバルには今回で2度目の出演です。",
       "slots": [
-        { "venue": "日比谷ステップ広場", "day": "5.16 SAT", "time": "15:00", "end": "15:45" }
-      ]
+        {
+          "venue": "日比谷ステップ広場",
+          "day": "5.16 SAT",
+          "time": "15:00",
+          "end": "15:45"
+        }
+      ],
+      "photo_width": 1600,
+      "photo_height": 1200
     },
     {
       "slug": "6-floor-jazz-orchestra",
       "name": "6 Floor Jazz Orchestra",
       "photo": "6-floor-jazz-orchestra.jpg",
-      "tags": ["ジャズオーケストラ"],
+      "tags": [
+        "ジャズオーケストラ"
+      ],
       "desc": "2017年結成、東京を拠点に活動するジャズオーケストラ。主にコンテンポラリーとメンバーオリジナルを演奏。2025年、浅草ジャズコンテストにてグランプリを受賞。1st Album「Chromatic Droplets」CD販売&サブスク配信中。6/27 赤坂B♭にてOne-Man Recitalを昼夜2公演開催予定。",
       "slots": [
-        { "venue": "日比谷ステップ広場", "day": "5.16 SAT", "time": "16:00", "end": "16:45" }
-      ]
+        {
+          "venue": "日比谷ステップ広場",
+          "day": "5.16 SAT",
+          "time": "16:00",
+          "end": "16:45"
+        }
+      ],
+      "photo_width": 1600,
+      "photo_height": 1600
     },
     {
       "slug": "albarino-budoukei-21",
       "name": "Albariño 〜葡萄系ビッグバンド第21弾〜",
       "photo": "albarino-budoukei-21.jpg",
-      "tags": ["ビッグバンド", "葡萄系"],
+      "tags": [
+        "ビッグバンド",
+        "葡萄系"
+      ],
       "desc": "ワイン好きのリーダーが葡萄品種をバンド名にして作る21個目のバンド。Albariño（アルバリーニョ）はスペイン生まれの白ブドウ。柑橘や青リンゴみたいに爽やかで、海に合うすっきり系白ワイン代表。すっきり爽やかな演奏をお届けします！ 2027年1/30に、日比谷ミッドタウンフードホールで演奏予定。",
       "slots": [
-        { "venue": "日比谷ステップ広場", "day": "5.16 SAT", "time": "17:00", "end": "17:45" }
-      ]
+        {
+          "venue": "日比谷ステップ広場",
+          "day": "5.16 SAT",
+          "time": "17:00",
+          "end": "17:45"
+        }
+      ],
+      "photo_width": 1600,
+      "photo_height": 1087
     },
     {
       "slug": "aoyama-royal-sounds",
       "name": "青山学院大学 Royal Sounds Jazz Orchestra",
       "photo": "aoyama-royal-sounds.jpg",
-      "tags": ["ビッグバンド", "大学"],
+      "tags": [
+        "ビッグバンド",
+        "大学"
+      ],
       "desc": "青学唯一のビッグバンドサークルです。ファンクやフュージョンを中心に様々なジャンルの音楽を演奏しています。月に1.2回程度対バンやイベントでの演奏の機会があり、大会への出場や関東以外の地域へ遠征して演奏を行っています。2025年度は夏の大会であるYBBJCにて、優勝をし、創部以来初である2連覇を達成することができました。",
       "slots": [
-        { "venue": "日比谷ステップ広場", "day": "5.17 SUN", "time": "12:00", "end": "12:45" }
-      ]
+        {
+          "venue": "日比谷ステップ広場",
+          "day": "5.17 SUN",
+          "time": "12:00",
+          "end": "12:45"
+        }
+      ],
+      "photo_width": 1477,
+      "photo_height": 1108
     },
     {
       "slug": "after5-lab-band",
       "name": "After5 Lab Band",
       "photo": "after5-lab-band.jpg",
-      "tags": ["ビッグバンド"],
+      "tags": [
+        "ビッグバンド"
+      ],
       "desc": "2004年にリーダー久光英太の呼びかけで結成されたビッグバンド。2024年9月に行われた結成20周年記念コンサートではアコーディオニストのcoba氏と共演するなど、従来のビッグバンドの枠組みに捉われない活動を展開しています。",
       "slots": [
-        { "venue": "日比谷ステップ広場", "day": "5.17 SUN", "time": "13:00", "end": "13:45" }
-      ]
+        {
+          "venue": "日比谷ステップ広場",
+          "day": "5.17 SUN",
+          "time": "13:00",
+          "end": "13:45"
+        }
+      ],
+      "photo_width": 1600,
+      "photo_height": 1066
     },
     {
       "slug": "happy-flight-jazz-orchestra",
       "name": "Happy Flight Jazz Orchestra",
       "photo": "happy-flight-jazz-orchestra.jpg",
-      "tags": ["ビッグバンド"],
+      "tags": [
+        "ビッグバンド"
+      ],
       "desc": "ハッピーでゴキゲンな演奏でお客さまに楽しんでもらうことをモットーとするビッグバンド。実力派揃いのメンバーの個性を活かしたソロと、調和のとれた一体感あるアンサンブルが特長で、2013年の結成から140回を超えるライブでパフォーマンスを磨いています。",
       "slots": [
-        { "venue": "日比谷ステップ広場", "day": "5.17 SUN", "time": "14:00", "end": "14:45" }
-      ]
+        {
+          "venue": "日比谷ステップ広場",
+          "day": "5.17 SUN",
+          "time": "14:00",
+          "end": "14:45"
+        }
+      ],
+      "photo_width": 580,
+      "photo_height": 326
     },
     {
       "slug": "barbera-budoukei-22",
       "name": "Barbera 〜葡萄系ビッグバンド第22弾〜",
       "photo": "barbera-budoukei-22.jpg",
-      "tags": ["ビッグバンド", "葡萄系"],
+      "tags": [
+        "ビッグバンド",
+        "葡萄系"
+      ],
       "desc": "ワイン好きのリーダーが葡萄品種をバンド名にして作る22個目のバンド。Barbera（バルベーラ）はイタリア・ピエモンテ州原産。明るい酸味と果実味が魅力で、チェリーのようにフレッシュで、重すぎない軽やか系赤ワイン。演奏もそこを目指します！この夏8/29に、日比谷ミッドタウンフードホールで演奏予定。",
       "slots": [
-        { "venue": "日比谷ステップ広場", "day": "5.17 SUN", "time": "15:00", "end": "15:45" }
-      ]
+        {
+          "venue": "日比谷ステップ広場",
+          "day": "5.17 SUN",
+          "time": "15:00",
+          "end": "15:45"
+        }
+      ],
+      "photo_width": 1600,
+      "photo_height": 1108
     },
     {
       "slug": "hibiya-vibrant-city-jazz",
       "name": "日比谷 vibrant city jazz orchestra",
       "photo": "hibiya-vibrant-city-jazz.jpg",
-      "tags": ["ビッグバンド"],
+      "tags": [
+        "ビッグバンド"
+      ],
       "desc": "優雅なホテルや劇場が集う日比谷を拠点に、鮮やかな音楽を奏でるハイクオリティなビッグバンドです。華やかな空間を創り上げ、お客さまと演者が一体となり、楽しい体験を共有します。今回の「Hibiya Festival 2026」でのステージもぜひお楽しみ下さい。",
       "slots": [
-        { "venue": "日比谷ステップ広場", "day": "5.17 SUN", "time": "16:00", "end": "16:45" }
-      ]
+        {
+          "venue": "日比谷ステップ広場",
+          "day": "5.17 SUN",
+          "time": "16:00",
+          "end": "16:45"
+        }
+      ],
+      "photo_width": 1600,
+      "photo_height": 1200
     },
     {
       "slug": "enomoto-segawa",
       "name": "榎本有希(Saxophone) × 瀬川千鶴(Guitar)",
       "photo": "enomoto-segawa.jpg",
-      "tags": ["デュオ"],
+      "tags": [
+        "デュオ"
+      ],
       "desc": "数々のコンテスト受賞歴を持ち、自身の活動だけでなく著名アーティストのサポートでも活躍する実力派ギタリスト瀬川千鶴と、2026年1月にBLUES ALLEY JAPANで行われた自身のワンマンライブを成功に収め、作曲にも定評のあるサックスプレイヤー榎本有希のデュオプロジェクトです。",
       "slots": [
-        { "venue": "HIBIYA FOOD HALL", "day": "5.16 SAT", "time": "12:00", "end": "12:45" },
-        { "venue": "日比谷OKUROJI", "day": "5.16 SAT", "time": "17:00", "end": "17:45" }
-      ]
+        {
+          "venue": "HIBIYA FOOD HALL",
+          "day": "5.16 SAT",
+          "time": "12:00",
+          "end": "12:45"
+        },
+        {
+          "venue": "日比谷OKUROJI",
+          "day": "5.16 SAT",
+          "time": "17:00",
+          "end": "17:45"
+        }
+      ],
+      "photo_width": 1346,
+      "photo_height": 1063
     },
     {
       "slug": "nakajima-mama-duo",
       "name": "中島有美 × 眞間麻美 Duo",
       "photo": "nakajima-mama-duo.jpg",
-      "tags": ["デュオ", "ヴォーカル"],
+      "tags": [
+        "デュオ",
+        "ヴォーカル"
+      ],
       "desc": "ソウルフルな歌声と確かなリズム感を持つ中島有美と、クラシックを基盤にした繊細かつ情熱的なピアノを奏でる眞間麻美によるデュオ。ジャンルを越えたアレンジと即興性あふれる演奏で、心揺さぶるライブを届ける。繊細さと華やかさをあわせ持つステージで、幅広い楽曲を二人ならではの表情豊かな世界観で描き出す。",
       "slots": [
-        { "venue": "HIBIYA FOOD HALL", "day": "5.16 SAT", "time": "13:00", "end": "13:45" },
-        { "venue": "日比谷OKUROJI", "day": "5.16 SAT", "time": "16:00", "end": "16:45" }
-      ]
+        {
+          "venue": "HIBIYA FOOD HALL",
+          "day": "5.16 SAT",
+          "time": "13:00",
+          "end": "13:45"
+        },
+        {
+          "venue": "日比谷OKUROJI",
+          "day": "5.16 SAT",
+          "time": "16:00",
+          "end": "16:45"
+        }
+      ],
+      "photo_width": 1600,
+      "photo_height": 1069
     },
     {
       "slug": "yokohama-ryotaro",
       "name": "横濱良太郎 (tb)",
       "photo": null,
-      "tags": ["トロンボーン"],
+      "tags": [
+        "トロンボーン"
+      ],
       "desc": "",
       "slots": [
-        { "venue": "HIBIYA FOOD HALL", "day": "5.16 SAT", "time": "17:00", "end": "17:45" },
-        { "venue": "日比谷OKUROJI", "day": "5.17 SUN", "time": "13:00", "end": "13:45" }
+        {
+          "venue": "HIBIYA FOOD HALL",
+          "day": "5.16 SAT",
+          "time": "17:00",
+          "end": "17:45"
+        },
+        {
+          "venue": "日比谷OKUROJI",
+          "day": "5.17 SUN",
+          "time": "13:00",
+          "end": "13:45"
+        }
       ]
     },
     {
       "slug": "axis-quintet",
       "name": "Axis Quintet（アクシス・クインテット）",
       "photo": "axis-quintet.jpg",
-      "tags": ["クインテット", "ジャズ"],
+      "tags": [
+        "クインテット",
+        "ジャズ"
+      ],
       "desc": "Seiko Summer Jazz Campでヤマハ賞を受賞した龍野日菜子(tp)、浅草ジャズコンテストでベストプレーヤー賞を受賞した松下美月(ts)をフロントに、松坂光輝(p)、大参泰平(b)、後藤龍太郎(ds)が強固なグルーヴを構築。スウィングから現代的アプローチまで自在に行き来し、都内を中心に活動中。",
       "slots": [
-        { "venue": "HIBIYA FOOD HALL", "day": "5.16 SAT", "time": "18:00", "end": "18:45" }
-      ]
+        {
+          "venue": "HIBIYA FOOD HALL",
+          "day": "5.16 SAT",
+          "time": "18:00",
+          "end": "18:45"
+        }
+      ],
+      "photo_width": 1206,
+      "photo_height": 794
     },
     {
       "slug": "furukawa-quartetto",
       "name": "古川翼 Quartetto",
       "photo": "furukawa-quartetto.jpg",
-      "tags": ["カルテット"],
+      "tags": [
+        "カルテット"
+      ],
       "desc": "古川翼(Sax)、Yuckey(Key)、ヤマノクチミキト(Ba)、長尾琢登(Ds)で構成されたユニット。多彩なジャンルをルーツに持ち、様々なシーンで活躍するメンバーの個性が集約された演奏を是非お楽しみください。",
       "slots": [
-        { "venue": "HIBIYA FOOD HALL", "day": "5.16 SAT", "time": "19:00", "end": "19:45" }
-      ]
+        {
+          "venue": "HIBIYA FOOD HALL",
+          "day": "5.16 SAT",
+          "time": "19:00",
+          "end": "19:45"
+        }
+      ],
+      "photo_width": 1536,
+      "photo_height": 1024
     },
     {
       "slug": "tamikiyo",
       "name": "TamiKiyo",
-      "photo": "tamikiyo.png",
-      "tags": ["デュオ", "ヴォーカル"],
+      "photo": "tamikiyo.jpg",
+      "tags": [
+        "デュオ",
+        "ヴォーカル"
+      ],
       "desc": "ビッグバンド Happy Flight Orchestraから軽やかに飛び出したPiano & Vocal Duo。初夏にふさわしい爽やかなナンバーを中心にお届けします。スペシャルゲスト参加も予定。",
       "slots": [
-        { "venue": "日比谷OKUROJI", "day": "5.16 SAT", "time": "18:00", "end": "18:45" }
-      ]
+        {
+          "venue": "日比谷OKUROJI",
+          "day": "5.16 SAT",
+          "time": "18:00",
+          "end": "18:45"
+        }
+      ],
+      "photo_width": 675,
+      "photo_height": 648
     },
     {
       "slug": "shibata-hoashi-futaribochi",
       "name": "柴田一輝、帆足昌太、2人ぼっち",
       "photo": null,
-      "tags": ["デュオ"],
+      "tags": [
+        "デュオ"
+      ],
       "desc": "",
       "slots": [
-        { "venue": "日比谷OKUROJI", "day": "5.16 SAT", "time": "19:00", "end": "19:45" }
+        {
+          "venue": "日比谷OKUROJI",
+          "day": "5.16 SAT",
+          "time": "19:00",
+          "end": "19:45"
+        }
       ]
     },
     {
       "slug": "matsushita-yoshida-duo",
       "name": "松下美月 × 吉田一成 Duo",
       "photo": null,
-      "tags": ["デュオ"],
+      "tags": [
+        "デュオ"
+      ],
       "desc": "",
       "slots": [
-        { "venue": "日比谷OKUROJI", "day": "5.16 SAT", "time": "20:00", "end": "20:45" }
+        {
+          "venue": "日比谷OKUROJI",
+          "day": "5.16 SAT",
+          "time": "20:00",
+          "end": "20:45"
+        }
       ]
     },
     {
       "slug": "goto-quintet",
       "name": "後藤天太 クインテット",
       "photo": null,
-      "tags": ["クインテット"],
+      "tags": [
+        "クインテット"
+      ],
       "desc": "",
       "slots": [
-        { "venue": "HIBIYA FOOD HALL", "day": "5.17 SUN", "time": "12:00", "end": "12:45" },
-        { "venue": "日比谷OKUROJI", "day": "5.17 SUN", "time": "16:00", "end": "16:45" }
+        {
+          "venue": "HIBIYA FOOD HALL",
+          "day": "5.17 SUN",
+          "time": "12:00",
+          "end": "12:45"
+        },
+        {
+          "venue": "日比谷OKUROJI",
+          "day": "5.17 SUN",
+          "time": "16:00",
+          "end": "16:45"
+        }
       ]
     },
     {
       "slug": "toyoshima-trio",
       "name": "豊嶋さおり TRIO",
       "photo": "toyoshima-trio.jpg",
-      "tags": ["トリオ", "タップ"],
+      "tags": [
+        "トリオ",
+        "タップ"
+      ],
       "desc": "タップダンサー豊嶋さおり(Tap)、岡勇希(Sax)、那姫-Nagi-(Bs)によるトリオ。タップダンスを軸とし、スウィングや即興を取り入れたジャズサウンドを展開。ライブならではのグルーヴで、音としても踊りとしても楽しめるパフォーマンスを届ける。",
       "slots": [
-        { "venue": "HIBIYA FOOD HALL", "day": "5.17 SUN", "time": "13:00", "end": "13:45" }
-      ]
+        {
+          "venue": "HIBIYA FOOD HALL",
+          "day": "5.17 SUN",
+          "time": "13:00",
+          "end": "13:45"
+        }
+      ],
+      "photo_width": 1600,
+      "photo_height": 900
     },
     {
       "slug": "spicy-hot-sax-quartet",
       "name": "Spicy & Hot Sax Quartet",
       "photo": "spicy-hot-sax-quartet.jpg",
-      "tags": ["カルテット", "サックス"],
+      "tags": [
+        "カルテット",
+        "サックス"
+      ],
       "desc": "謎に和装のおっさんがアニソンをJazzる「Spicy & Hot Sax Quartet」と申します。結成1年強、フェスやライブハウス等でのライブを積み重ねてきたSax Quartet + Cajonが、アニソンを素材にジャズ好きがニヤリと笑う変幻自在のアレンジとアドリブで熱い演奏をお聞かせします。",
       "slots": [
-        { "venue": "日比谷OKUROJI", "day": "5.17 SUN", "time": "12:00", "end": "12:45" },
-        { "venue": "HIBIYA FOOD HALL", "day": "5.17 SUN", "time": "17:00", "end": "17:45" }
-      ]
+        {
+          "venue": "日比谷OKUROJI",
+          "day": "5.17 SUN",
+          "time": "12:00",
+          "end": "12:45"
+        },
+        {
+          "venue": "HIBIYA FOOD HALL",
+          "day": "5.17 SUN",
+          "time": "17:00",
+          "end": "17:45"
+        }
+      ],
+      "photo_width": 960,
+      "photo_height": 594
     },
     {
       "slug": "tamikiyo-and-friends",
       "name": "TamiKiyo & Friends",
-      "photo": "tamikiyo-and-friends.png",
-      "tags": ["ジャズ", "ヴォーカル"],
+      "photo": "tamikiyo-and-friends.jpg",
+      "tags": [
+        "ジャズ",
+        "ヴォーカル"
+      ],
       "desc": "vocal Tamieと、piano Kiyoを中心に、ジャズをこよなく愛するメンバーが集まったTamiKiyo & Friends。お食事やお酒がより美味しくなる、世代を超えて楽しめるHappyなジャズナンバーをお届けします。",
       "slots": [
-        { "venue": "HIBIYA FOOD HALL", "day": "5.17 SUN", "time": "18:00", "end": "18:45" }
-      ]
+        {
+          "venue": "HIBIYA FOOD HALL",
+          "day": "5.17 SUN",
+          "time": "18:00",
+          "end": "18:45"
+        }
+      ],
+      "photo_width": 1159,
+      "photo_height": 648
     },
     {
       "slug": "tominaga-maeda-duo",
       "name": "冨永悟×前田勇作DUO",
       "photo": "tominaga-maeda-duo.jpg",
-      "tags": ["デュオ", "トロンボーン"],
+      "tags": [
+        "デュオ",
+        "トロンボーン"
+      ],
       "desc": "温かく力強い音色を持ち味とするトロンボーン奏者・冨永悟が、厚い信頼を寄せるピアニスト前田勇作と演奏します。ジャズの名曲や、6/17発売予定の1st Album『TORAIWA』収録の、風景や情景を描いたオリジナル曲をお届けします。当日はCDの会場先行販売も行います。お気軽にお楽しみください。",
       "slots": [
-        { "venue": "日比谷OKUROJI", "day": "5.17 SUN", "time": "14:00", "end": "14:45" }
-      ]
+        {
+          "venue": "日比谷OKUROJI",
+          "day": "5.17 SUN",
+          "time": "14:00",
+          "end": "14:45"
+        }
+      ],
+      "photo_width": 1522,
+      "photo_height": 1076
     },
     {
       "slug": "ishiwaki-tanaka-duo",
       "name": "石脇サンタSax 田中亮輔Gt Duo",
       "photo": null,
-      "tags": ["デュオ"],
+      "tags": [
+        "デュオ"
+      ],
       "desc": "",
       "slots": [
-        { "venue": "日比谷OKUROJI", "day": "5.17 SUN", "time": "15:00", "end": "15:45" }
+        {
+          "venue": "日比谷OKUROJI",
+          "day": "5.17 SUN",
+          "time": "15:00",
+          "end": "15:45"
+        }
       ]
     }
   ]

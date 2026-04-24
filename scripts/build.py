@@ -129,6 +129,8 @@ TEMPLATE = """<!doctype html>
 <meta property="og:description" content="{og_desc}" />
 <meta property="og:url" content="{page_url}" />
 <meta property="og:image" content="{og_image}" />
+<meta property="og:image:secure_url" content="{og_image}" />{og_image_dims}
+<meta property="og:image:alt" content="{name}" />
 <meta property="og:locale" content="ja_JP" />
 
 <!-- Twitter Card -->
@@ -136,6 +138,7 @@ TEMPLATE = """<!doctype html>
 <meta name="twitter:title" content="{name} ｜ {site_name}" />
 <meta name="twitter:description" content="{og_desc}" />
 <meta name="twitter:image" content="{og_image}" />
+<meta name="twitter:image:alt" content="{name}" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -277,6 +280,14 @@ def main() -> int:
             if photo
             else f"{site_url}/assets/ogp-default.jpg"
         )
+        pw = a.get("photo_width")
+        ph = a.get("photo_height")
+        og_image_dims = (
+            f'\n<meta property="og:image:width" content="{pw}" />'
+            f'\n<meta property="og:image:height" content="{ph}" />'
+            if pw and ph
+            else ""
+        )
 
         share_summary = (
             f"{name} | {slot_summary(slots)} | {site_name} (5.16-5.17 日比谷 / 入場無料)"
@@ -307,6 +318,7 @@ def main() -> int:
             name=esc(name),
             og_desc=esc(og_desc),
             og_image=esc(og_image),
+            og_image_dims=og_image_dims,
             page_url=esc(page_url),
             photo_html=build_photo_html(photo, name, ".."),
             tags_html=tags_html,
