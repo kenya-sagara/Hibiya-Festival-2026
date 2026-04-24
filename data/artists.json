@@ -352,12 +352,14 @@
     },
     {
       "slug": "matsushita-yoshida-duo",
-      "name": "松下美月 × 吉田一成 Duo",
-      "photo": null,
+      "name": "松下美月×吉田一成Duo",
+      "photo": "matsushita-yoshida-duo.jpg",
       "tags": [
-        "デュオ"
+        "デュオ",
+        "サックス",
+        "ギター"
       ],
-      "desc": "",
+      "desc": "都内各所で活動中の松下美月(Sax)と吉田一成(Gt)によるデュオ。ソプラノ、テナーサックスの深く渋い音色とギターの豊かなサウンド、ハーモニーとともにOKUROJIでの素敵な夜をお過ごしください。",
       "slots": [
         {
           "venue": "日比谷OKUROJI",
@@ -365,7 +367,9 @@
           "time": "20:00",
           "end": "20:45"
         }
-      ]
+      ],
+      "photo_width": 1254,
+      "photo_height": 1254
     },
     {
       "slug": "goto-quintet",
