@@ -4,6 +4,13 @@
 
 ## 2026-04-25
 
+### 変更
+
+- フッタのクレジット表記を修正
+  - 「協力: 日比谷OKUROJI 事務局」→「協力: 日比谷OKUROJI」
+  - 「業務: アーティストマージ」→「事務局業務: アーティストマージ」
+  - `index.html`、`scripts/build.py` のテンプレート、`docs/OVERVIEW.md` を同時修正し専用ページを再生成
+
 ### 追加
 
 - **独自ドメイン**：`https://hibiya-festival.artistmerge.jp` で公開開始
