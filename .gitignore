@@ -1,0 +1,16 @@
+# source materials (not to be published)
+_source/
+
+# editor / os / AI session state
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.claude/
+memory/
+
+# logs
+*.log
+
+# node (未使用だが予防的に)
+node_modules/

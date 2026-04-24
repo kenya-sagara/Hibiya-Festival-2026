@@ -1,0 +1,360 @@
+/* ==========================================================================
+   Per-artist page
+   ========================================================================== */
+
+.artist-page {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: var(--font-disp);
+  font-size: 11px;
+  letter-spacing: .22em;
+  color: var(--fg-dim);
+  text-transform: uppercase;
+}
+.breadcrumbs a { color: var(--accent); }
+.breadcrumbs a:hover { color: var(--accent-2); opacity: 1; }
+.breadcrumbs [aria-current="page"] { color: var(--fg); }
+
+/* hero */
+.artist-hero {
+  max-width: var(--maxw);
+  margin: clamp(32px, 5vw, 64px) auto 0;
+  padding: 0 var(--pad);
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(32px, 5vw, 80px);
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .artist-hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.artist-hero__photo {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  background:
+    radial-gradient(ellipse at center, rgba(232, 182, 77, .08) 0%, transparent 70%),
+    linear-gradient(135deg, var(--bg-soft), var(--surface));
+  border: 1px solid var(--line-soft);
+  overflow: hidden;
+  position: relative;
+}
+.artist-hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: saturate(.95) contrast(1.02);
+}
+
+.artist-hero__photo--placeholder {
+  display: grid;
+  place-items: center;
+}
+.artist-hero__photo--placeholder span {
+  font-family: var(--font-disp);
+  font-size: 14px;
+  letter-spacing: .4em;
+  color: var(--fg-dim);
+}
+
+.artist-hero__eyebrow {
+  font-family: var(--font-disp);
+  font-size: 12px;
+  letter-spacing: .4em;
+  color: var(--accent);
+  margin: 0 0 16px;
+  padding-left: 56px;
+  position: relative;
+  text-transform: uppercase;
+}
+.artist-hero__eyebrow::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 50%;
+  width: 40px; height: 1px;
+  background: var(--accent);
+}
+
+.artist-hero__name {
+  margin: 0 0 20px;
+  font-size: clamp(26px, 3.6vw, 42px);
+  font-weight: 700;
+  letter-spacing: .01em;
+  line-height: 1.2;
+}
+
+.artist-hero__tags {
+  margin: 0 0 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.artist-tag {
+  padding: 4px 12px;
+  font-family: var(--font-disp);
+  font-size: 11px;
+  letter-spacing: .2em;
+  color: var(--accent);
+  border: 1px solid var(--line);
+  text-transform: uppercase;
+}
+
+.artist-hero__slots {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  border-top: 1px solid var(--line-soft);
+}
+.slot {
+  display: grid;
+  grid-template-columns: 120px 150px 1fr;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line-soft);
+  align-items: baseline;
+  font-family: var(--font-disp);
+  font-size: 14px;
+  letter-spacing: .06em;
+}
+@media (max-width: 560px) {
+  .slot {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 16px 0;
+  }
+}
+.slot__day {
+  color: var(--accent);
+  font-weight: 600;
+}
+.slot__time {
+  color: var(--fg);
+}
+.slot__venue {
+  color: var(--fg-mute);
+  font-family: var(--font-jp);
+  font-weight: 500;
+}
+
+.artist-hero__cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* profile */
+.artist-profile {
+  max-width: var(--maxw);
+  margin: clamp(56px, 7vw, 96px) auto 0;
+  padding: 0 var(--pad);
+}
+.artist-profile__title {
+  font-family: var(--font-disp);
+  font-size: 12px;
+  letter-spacing: .4em;
+  color: var(--accent);
+  margin: 0 0 24px;
+  padding-left: 56px;
+  position: relative;
+  text-transform: uppercase;
+}
+.artist-profile__title::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 50%;
+  width: 40px; height: 1px;
+  background: var(--accent);
+}
+.artist-profile__body {
+  max-width: 800px;
+  font-size: 16px;
+  line-height: 2;
+  color: var(--fg-mute);
+}
+.artist-profile__body p { margin: 0 0 1em; }
+.artist-profile__body p:last-child { margin-bottom: 0; }
+
+/* share */
+.artist-share {
+  max-width: var(--maxw);
+  margin: clamp(56px, 7vw, 96px) auto 0;
+  padding: clamp(32px, 4vw, 56px) var(--pad);
+  background: var(--bg-alt);
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+.artist-share__title {
+  font-family: var(--font-disp);
+  font-size: 12px;
+  letter-spacing: .4em;
+  color: var(--accent);
+  margin: 0 0 8px;
+  padding-left: 56px;
+  position: relative;
+  text-transform: uppercase;
+}
+.artist-share__title::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 50%;
+  width: 40px; height: 1px;
+  background: var(--accent);
+}
+.artist-share__lead {
+  margin: 0 0 24px;
+  color: var(--fg-mute);
+  font-size: 14px;
+}
+
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  font-family: var(--font-disp);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  color: var(--fg);
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  cursor: pointer;
+  transition: background .25s var(--ease), transform .25s var(--ease), border-color .25s var(--ease);
+  text-decoration: none;
+}
+.share-btn:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+.share-btn__icon {
+  display: inline-grid;
+  place-items: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--bg);
+  background: var(--fg);
+  letter-spacing: 0;
+}
+.share-btn--x:hover       { background: #1a1a1a; }
+.share-btn--x .share-btn__icon       { background: #f2eee3; color: #000; font-size: 14px; }
+.share-btn--line:hover    { background: #062; }
+.share-btn--line .share-btn__icon    { background: #06c755; color: #fff; font-size: 9px; }
+.share-btn--fb:hover      { background: #15396b; }
+.share-btn--fb .share-btn__icon      { background: #1877f2; color: #fff; font-family: var(--font-en); font-style: italic; font-size: 15px; }
+.share-btn--copy .share-btn__icon    { background: var(--accent); color: var(--bg); font-size: 13px; }
+.share-btn--copy.is-copied {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.share-btn--copy.is-copied .share-btn__label::after {
+  content: "  ✓ COPIED";
+  margin-left: 8px;
+  color: var(--accent);
+}
+
+/* compact variant used on the main-page artist card */
+.share-buttons--compact {
+  gap: 6px;
+}
+.share-buttons--compact .share-btn {
+  padding: 6px 10px;
+  font-size: 10px;
+  letter-spacing: .1em;
+  border-radius: 0;
+}
+.share-buttons--compact .share-btn__label {
+  display: none;
+}
+.share-buttons--compact .share-btn__icon {
+  min-width: 18px;
+  height: 18px;
+}
+
+/* pager */
+.artist-pager {
+  max-width: var(--maxw);
+  margin: clamp(40px, 5vw, 72px) auto 0;
+  padding: 0 var(--pad);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: center;
+}
+@media (max-width: 720px) {
+  .artist-pager {
+    grid-template-columns: 1fr;
+  }
+  .artist-pager > * { justify-self: stretch; }
+}
+.artist-pager__prev,
+.artist-pager__next {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 20px;
+  border: 1px solid var(--line-soft);
+  color: var(--fg);
+  min-height: 64px;
+  justify-content: center;
+  transition: border-color .25s var(--ease), background .25s var(--ease);
+}
+.artist-pager__prev { text-align: left; }
+.artist-pager__next { text-align: right; align-items: flex-end; }
+.artist-pager__prev:hover,
+.artist-pager__next:hover {
+  border-color: var(--accent);
+  background: rgba(232, 182, 77, .05);
+  opacity: 1;
+}
+.artist-pager__prev--disabled,
+.artist-pager__next--disabled { visibility: hidden; }
+.artist-pager__label {
+  font-family: var(--font-disp);
+  font-size: 10px;
+  letter-spacing: .3em;
+  color: var(--accent);
+}
+.artist-pager__name {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.artist-pager__back {
+  padding: 16px 28px;
+  font-family: var(--font-disp);
+  font-size: 12px;
+  letter-spacing: .22em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  text-transform: uppercase;
+  transition: background .25s var(--ease), color .25s var(--ease);
+  text-align: center;
+}
+.artist-pager__back:hover {
+  background: var(--accent);
+  color: var(--bg);
+  opacity: 1;
+}
