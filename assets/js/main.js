@@ -208,9 +208,9 @@
     if (!el || typeof L === 'undefined') return;
 
     const venues = [
-      { num: '01', name: '日比谷ステップ広場 特設ステージ', sub: '東京メトロ日比谷駅 A11出口直結', latlng: [35.6740, 139.7589] },
-      { num: '02', name: 'HIBIYA FOOD HALL',               sub: '東京ミッドタウン日比谷 B1F',     latlng: [35.6739, 139.7593] },
-      { num: '03', name: '日比谷OKUROJI',                   sub: 'JR新橋駅 / 有楽町駅 徒歩約4分',  latlng: [35.6695, 139.7595] },
+      { num: '01', name: '日比谷ステップ広場 特設ステージ', sub: '東京メトロ日比谷駅 A11出口直結', latlng: [35.673798, 139.760017] },
+      { num: '02', name: 'HIBIYA FOOD HALL',               sub: '東京ミッドタウン日比谷 B1F',     latlng: [35.674044, 139.759613] },
+      { num: '03', name: '日比谷OKUROJI',                   sub: 'JR新橋駅 / 有楽町駅 徒歩約4分',  latlng: [35.671306, 139.759593] },
     ];
 
     const map = L.map(el, {
