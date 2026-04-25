@@ -111,7 +111,7 @@
         "ビッグバンド",
         "大学"
       ],
-      "desc": "青学唯一のビッグバンドサークルです。ファンクやフュージョンを中心に様々なジャンルの音楽を演奏しています。月に1.2回程度対バンやイベントでの演奏の機会があり、大会への出場や関東以外の地域へ遠征して演奏を行っています。2025年度は夏の大会であるYBBJCにて、優勝をし、創部以来初である2連覇を達成することができました。",
+      "desc": "青学唯一のビッグバンドサークルです。ファンクやフュージョンを中心に様々なジャンルの音楽を演奏しています。月に1.2回程度対バンやイベントでの演奏の機会があり、大会への出場や関東以外の地域へ遠征して演奏を行っています。2025年度は夏の大会であるYBBJC（ヤマノ・ビッグバンド・ジャズ・コンテスト）にて、優勝をし、創部以来初である2連覇を達成することができました。",
       "slots": [
         {
           "venue": "日比谷ステップ広場",
@@ -202,7 +202,7 @@
     },
     {
       "slug": "enomoto-segawa",
-      "name": "榎本有希(Saxophone) × 瀬川千鶴(Guitar)",
+      "name": "榎本有希(Sax) × 瀬川千鶴(Gt)",
       "photo": "enomoto-segawa.jpg",
       "tags": [
         "デュオ"
@@ -227,7 +227,7 @@
     },
     {
       "slug": "nakajima-mama-duo",
-      "name": "中島有美 × 眞間麻美 Duo",
+      "name": "中島有美(Vo) × 眞間麻美(P) Duo",
       "photo": "nakajima-mama-duo.jpg",
       "tags": [
         "デュオ",
@@ -252,8 +252,8 @@
       "photo_height": 1069
     },
     {
-      "slug": "yokohama-ryotaro",
-      "name": "横濱良太郎 (tb)",
+      "slug": "yokohama-ryotaro-standards",
+      "name": "横濱良太郎(Tb) standards",
       "photo": null,
       "tags": [
         "トロンボーン"
@@ -265,7 +265,19 @@
           "day": "5.16 SAT",
           "time": "17:00",
           "end": "17:45"
-        },
+        }
+      ]
+    },
+    {
+      "slug": "yokohama-ryotaro-quartet",
+      "name": "横濱良太郎(Tb) Quartet",
+      "photo": null,
+      "tags": [
+        "トロンボーン",
+        "カルテット"
+      ],
+      "desc": "",
+      "slots": [
         {
           "venue": "日比谷OKUROJI",
           "day": "5.17 SUN",
@@ -296,7 +308,7 @@
     },
     {
       "slug": "furukawa-quartetto",
-      "name": "古川翼 Quartetto",
+      "name": "古川翼(Sax) Quartetto",
       "photo": "furukawa-quartetto.jpg",
       "tags": [
         "カルテット"
@@ -352,7 +364,7 @@
     },
     {
       "slug": "matsushita-yoshida-duo",
-      "name": "松下美月×吉田一成Duo",
+      "name": "松下美月(Sax) × 吉田一成(Gt)Duo",
       "photo": "matsushita-yoshida-duo.jpg",
       "tags": [
         "デュオ",
@@ -373,10 +385,11 @@
     },
     {
       "slug": "goto-quintet",
-      "name": "後藤天太 クインテット",
+      "name": "後藤天太(Sax) クインテット",
       "photo": null,
       "tags": [
-        "クインテット"
+        "クインテット",
+        "サックス"
       ],
       "desc": "",
       "slots": [
@@ -385,7 +398,20 @@
           "day": "5.17 SUN",
           "time": "12:00",
           "end": "12:45"
-        },
+        }
+      ]
+    },
+    {
+      "slug": "goto-miyamoto-duo",
+      "name": "後藤天太(Sax) × 宮本憲(Gt) Duo",
+      "photo": null,
+      "tags": [
+        "デュオ",
+        "サックス",
+        "ギター"
+      ],
+      "desc": "幅広いジャンルで活躍する後藤天太、宮本憲によるデュオ。そんな活動の中で何度も一緒に音を出した2人の息のあったセッションをお届けします。大人数バンドサウンドとはまた違ったサックス×ギターの演奏をお楽しみください。",
+      "slots": [
         {
           "venue": "日比谷OKUROJI",
           "day": "5.17 SUN",
@@ -396,7 +422,7 @@
     },
     {
       "slug": "toyoshima-trio",
-      "name": "豊嶋さおり TRIO",
+      "name": "豊嶋さおり(Tap) TRIO",
       "photo": "toyoshima-trio.jpg",
       "tags": [
         "トリオ",
@@ -462,7 +488,7 @@
     },
     {
       "slug": "tominaga-maeda-duo",
-      "name": "冨永悟×前田勇作DUO",
+      "name": "冨永悟(Tb)×前田勇作(P)DUO",
       "photo": "tominaga-maeda-duo.jpg",
       "tags": [
         "デュオ",
@@ -482,12 +508,14 @@
     },
     {
       "slug": "ishiwaki-tanaka-duo",
-      "name": "石脇サンタSax 田中亮輔Gt Duo",
-      "photo": null,
+      "name": "石脇サンタ(Sax) × 田中亮輔(Gt) Duo",
+      "photo": "ishiwaki-tanaka-duo.jpg",
       "tags": [
-        "デュオ"
+        "デュオ",
+        "サックス",
+        "ギター"
       ],
-      "desc": "",
+      "desc": "初共演のアコースティック・デュオ、ジャンルの枠組みにとらわれない自由な演奏をお届けします。 石脇サンタ：大阪音楽大学ジャズ専攻首席卒業、Sapporo City Jazz 2025 Park Jazz Live Contest 最優秀賞。 田中亮輔：尚美学園大学作曲専攻卒業、第15回 TOKYO JAZZ FESTIVAL 出演。",
       "slots": [
         {
           "venue": "日比谷OKUROJI",
@@ -495,7 +523,9 @@
           "time": "15:00",
           "end": "15:45"
         }
-      ]
+      ],
+      "photo_width": 768,
+      "photo_height": 768
     }
   ]
 }

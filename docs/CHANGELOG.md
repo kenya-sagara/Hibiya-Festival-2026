@@ -4,6 +4,23 @@
 
 ## 2026-04-25
 
+### 追加・変更（Google Sheet 最新版反映）
+
+- **横濱良太郎** を出演編成ごとに2エントリに分割
+  - 5/16 FOOD HALL → 「横濱良太郎(Tb) standards」(yokohama-ryotaro-standards)
+  - 5/17 OKUROJI → 「横濱良太郎(Tb) Quartet」(yokohama-ryotaro-quartet)
+- **後藤天太** を出演編成ごとに2エントリに分割
+  - 5/17 FOOD HALL → 「後藤天太(Sax) クインテット」(goto-quintet)
+  - 5/17 OKUROJI → 「後藤天太(Sax) × 宮本憲(Gt) Duo」(goto-miyamoto-duo) ※新規プロフィール付き
+- **石脇サンタ × 田中亮輔 Duo** にプロフィールと写真を追加
+- アーティスト名に楽器略号を統一表記
+  - 榎本有希 / 瀬川千鶴 → (Sax)/(Gt)（旧 Saxophone/Guitar）
+  - 中島有美 / 眞間麻美 → (Vo)/(P)
+  - 古川翼 → (Sax)、豊嶋さおり → (Tap)、冨永悟/前田勇作 → (Tb)/(P)
+  - 松下美月/吉田一成 → (Sax)/(Gt)
+- **楽器略号の凡例を SCHEDULE セクションに追加**（Sax/Gt/Vo/P/Tb/Tp/Bs/Ds/Per/Tap など、馴染みのない方向け）
+- 青山学院大学 Royal Sounds の YBBJC を「ヤマノ・ビッグバンド・ジャズ・コンテスト」と注釈追記
+
 ### 変更（注意書きの誤解防止）
 
 - 「雨天開催 / 荒天中止」を DAY 見出しから削除し、**日比谷ステップ広場 特設ステージ のステージカードのみ**に移動
