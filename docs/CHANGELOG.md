@@ -6,7 +6,8 @@
 
 ### 変更（アクセスマップ）
 
-- アクセスセクションの地図を OpenStreetMap iframe（1ピン）から **Leaflet.js + CARTO Dark タイル** に置換
+- 地図タイルを **CARTO Dark → CARTO Voyager**（明るめ・カラー）に切替して視認性を改善
+- アクセスセクションの地図を OpenStreetMap iframe（1ピン）から **Leaflet.js + CARTO Voyager タイル** に置換
 - **3会場すべてに番号付きピン（01/02/03）** をゴールド色で表示し、クリックで会場名と最寄駅をポップアップ表示
 - ダーク基調にあわせたタイル＆コントロール配色、自動 fitBounds で3会場を一画面に収める
 - API キー不要・無料（OSM + CARTO 無償利用、商用は別途確認）

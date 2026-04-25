@@ -1030,25 +1030,25 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   font-family: var(--font-jp);
 }
 
-/* Leaflet dark theme overrides */
+/* Leaflet (Voyager / light) overrides */
 .leaflet-container {
-  background: #0a1020;
+  background: #e8ecef;
 }
 .leaflet-control-attribution {
-  background: rgba(11, 19, 34, .8) !important;
-  color: var(--fg-mute) !important;
+  background: rgba(255, 255, 255, .85) !important;
+  color: #555 !important;
   font-size: 10px !important;
   padding: 2px 8px !important;
 }
-.leaflet-control-attribution a { color: var(--accent) !important; }
+.leaflet-control-attribution a { color: #0a66c2 !important; }
 .leaflet-control-zoom a {
-  background: var(--bg-soft) !important;
-  color: var(--fg) !important;
-  border-color: var(--line-soft) !important;
+  background: #fff !important;
+  color: #333 !important;
+  border-color: #ccc !important;
 }
 .leaflet-control-zoom a:hover {
-  background: var(--surface) !important;
-  color: var(--accent) !important;
+  background: var(--accent) !important;
+  color: var(--bg) !important;
 }
 
 /* Custom venue marker */
