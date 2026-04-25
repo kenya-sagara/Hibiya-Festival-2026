@@ -404,7 +404,7 @@
     {
       "slug": "goto-miyamoto-duo",
       "name": "後藤天太(Sax) × 宮本憲(Gt) Duo",
-      "photo": null,
+      "photo": "goto-miyamoto-duo.jpg",
       "tags": [
         "デュオ",
         "サックス",
@@ -418,7 +418,9 @@
           "time": "16:00",
           "end": "16:45"
         }
-      ]
+      ],
+      "photo_width": 1520,
+      "photo_height": 855
     },
     {
       "slug": "toyoshima-trio",
