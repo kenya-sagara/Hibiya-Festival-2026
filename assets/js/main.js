@@ -202,12 +202,56 @@
     }
   }
 
+  // ---- Access map (Leaflet + CARTO Dark tiles) ----
+  function initAccessMap() {
+    const el = document.getElementById('accessMap');
+    if (!el || typeof L === 'undefined') return;
+
+    const venues = [
+      { num: '01', name: '日比谷ステップ広場 特設ステージ', sub: '東京メトロ日比谷駅 A11出口直結', latlng: [35.6740, 139.7589] },
+      { num: '02', name: 'HIBIYA FOOD HALL',               sub: '東京ミッドタウン日比谷 B1F',     latlng: [35.6739, 139.7593] },
+      { num: '03', name: '日比谷OKUROJI',                   sub: 'JR新橋駅 / 有楽町駅 徒歩約4分',  latlng: [35.6695, 139.7595] },
+    ];
+
+    const map = L.map(el, {
+      scrollWheelZoom: false,
+      zoomControl: true,
+      attributionControl: true,
+    });
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains: 'abcd',
+      maxZoom: 19,
+    }).addTo(map);
+
+    venues.forEach((v) => {
+      const icon = L.divIcon({
+        className: 'venue-pin',
+        html: `<div class="venue-pin__inner"><span>${v.num}</span></div><div class="venue-pin__shadow"></div>`,
+        iconSize: [44, 56],
+        iconAnchor: [22, 52],
+        popupAnchor: [0, -50],
+      });
+      L.marker(v.latlng, { icon, title: v.name })
+        .addTo(map)
+        .bindPopup(
+          `<strong>${v.name}</strong><br /><span class="venue-popup__sub">${v.sub}</span>`,
+          { className: 'venue-popup', closeButton: true }
+        );
+    });
+
+    const bounds = L.latLngBounds(venues.map((v) => v.latlng));
+    map.fitBounds(bounds, { padding: [50, 50], maxZoom: 16 });
+  }
+
   // ---- Boot ----
   document.addEventListener('DOMContentLoaded', async () => {
     initHeader();
     initNavToggle();
     initReveal();
     initArtistHighlight();
+    initAccessMap();
     const data = await loadArtists();
     if (data) buildArtists(data);
   });

@@ -33,6 +33,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/style.css" />
 <link rel="stylesheet" href="assets/css/artist.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
 </head>
 <body>
 
@@ -323,13 +324,7 @@
           </article>
         </div>
 
-        <div class="access__map">
-          <iframe
-            src="https://www.openstreetmap.org/export/embed.html?bbox=139.7545%2C35.6705%2C139.7640%2C35.6770&amp;layer=mapnik&amp;marker=35.67385%2C139.75925"
-            title="日比谷エリアマップ"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        <div class="access__map" id="accessMap" role="img" aria-label="日比谷エリア 3会場マップ"></div>
       </div>
     </div>
   </section>
@@ -352,6 +347,7 @@
   </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>
