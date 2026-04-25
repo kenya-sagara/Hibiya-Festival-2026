@@ -579,10 +579,10 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 }
 .day__date em {
   color: var(--accent);
-  font-style: italic;
-  font-family: var(--font-en);
-  font-weight: 600;
-  padding: 0 .1em;
+  font-style: normal;
+  font-family: var(--font-disp);
+  font-weight: 700;
+  padding: 0 .05em;
 }
 .day__date span {
   margin-left: 8px;
