@@ -225,6 +225,7 @@
       maxZoom: 19,
     }).addTo(map);
 
+    const markersByNum = {};
     venues.forEach((v) => {
       const icon = L.divIcon({
         className: 'venue-pin',
@@ -233,16 +234,50 @@
         iconAnchor: [22, 52],
         popupAnchor: [0, -50],
       });
-      L.marker(v.latlng, { icon, title: v.name })
+      const marker = L.marker(v.latlng, { icon, title: v.name })
         .addTo(map)
         .bindPopup(
           `<strong>${v.name}</strong><br /><span class="venue-popup__sub">${v.sub}</span>`,
           { className: 'venue-popup', closeButton: true }
         );
+      markersByNum[v.num] = marker;
     });
 
     const bounds = L.latLngBounds(venues.map((v) => v.latlng));
     map.fitBounds(bounds, { padding: [50, 50], maxZoom: 16 });
+
+    // Wire access list items <-> map markers
+    const items = document.querySelectorAll('.access__item[data-venue]');
+    const activate = (num) => {
+      const marker = markersByNum[num];
+      if (!marker) return;
+      map.flyTo(marker.getLatLng(), Math.max(map.getZoom(), 17), {
+        animate: true,
+        duration: 0.6,
+      });
+      marker.openPopup();
+      items.forEach((it) => {
+        it.classList.toggle('is-active', it.dataset.venue === num);
+      });
+    };
+    items.forEach((item) => {
+      item.addEventListener('click', () => activate(item.dataset.venue));
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          activate(item.dataset.venue);
+        }
+      });
+    });
+    // Sync the active state when the user closes a popup or clicks a different pin.
+    map.on('popupclose', () => {
+      items.forEach((it) => it.classList.remove('is-active'));
+    });
+    Object.entries(markersByNum).forEach(([num, marker]) => {
+      marker.on('popupopen', () => {
+        items.forEach((it) => it.classList.toggle('is-active', it.dataset.venue === num));
+      });
+    });
   }
 
   // ---- Boot ----
