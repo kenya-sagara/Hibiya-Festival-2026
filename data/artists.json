@@ -349,12 +349,14 @@
     },
     {
       "slug": "shibata-hoashi-futaribochi",
-      "name": "柴田一輝、帆足昌太、2人ぼっち",
-      "photo": null,
+      "name": "柴田一輝(Key)、帆足昌太(Bs)、2人ぼっち",
+      "photo": "shibata-hoashi-futaribochi.jpg",
       "tags": [
-        "デュオ"
+        "デュオ",
+        "キーボード",
+        "ベース"
       ],
-      "desc": "",
+      "desc": "都会の夜に溶け込む、洗練されたサウンド。繊細さと爆発力を併せ持つプレイで、スタンダードからオリジナルまで自在に行き来する。一音ごとに交わされる会話のようなインタープレイが、唯一無二の時間を生み出します。",
       "slots": [
         {
           "venue": "日比谷OKUROJI",
@@ -362,7 +364,9 @@
           "time": "19:00",
           "end": "19:45"
         }
-      ]
+      ],
+      "photo_width": 1414,
+      "photo_height": 2000
     },
     {
       "slug": "matsushita-yoshida-duo",
