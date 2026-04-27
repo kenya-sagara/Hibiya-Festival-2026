@@ -270,13 +270,13 @@
     },
     {
       "slug": "yokohama-ryotaro-quartet",
-      "name": "横濱良太郎(Tb) Quartet",
-      "photo": null,
+      "name": "横濱良太郎(Tb)カルテット",
+      "photo": "yokohama-ryotaro-quartet.jpg",
       "tags": [
         "トロンボーン",
         "カルテット"
       ],
-      "desc": "",
+      "desc": "横濱良太郎(Tb)、伊東寿(P)、杉内浩介(Gt)、木村優太（Bs）によって結成されたこの日のためのバンドです！Straight aheadなbop tunesを中心に演奏します。大学卒業したてでまだまだ駆け出しの我々ですが、ジャズへの敬意を込めて精一杯演奏しますのでぜひお立ち寄りください。",
       "slots": [
         {
           "venue": "日比谷OKUROJI",
@@ -284,7 +284,9 @@
           "time": "13:00",
           "end": "13:45"
         }
-      ]
+      ],
+      "photo_width": 1108,
+      "photo_height": 1477
     },
     {
       "slug": "axis-quintet",
