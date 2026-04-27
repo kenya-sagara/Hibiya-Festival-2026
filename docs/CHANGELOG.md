@@ -12,6 +12,16 @@
 - タグに **キーボード / ベース** を追加
 - OGP / Twitter Card / 個別ページ（`artists/shibata-hoashi-futaribochi.html`）・index タイムテーブル・前後ページャ（古川翼、松下美月）の表記もあわせて更新
 
+### 変更（榎本有希(Sax) × 瀬川千鶴(Gt)）
+
+- メイン写真（`assets/artists/enomoto-segawa.jpg`）を提供素材に差し替え（寸法は 1346×1063 で同一）
+
+### 変更（TamiKiyo / TamiKiyo & Friends プロフィール文）
+
+- **TamiKiyo**：メンバー本名を併記する形に更新（「VocalのTamie（梶多美江）／PianoのKiyo（山口記世）によるDuo」）。語尾と装飾を提供文に合わせ、♪ 等の記号も反映
+- **TamiKiyo & Friends**：構成メンバー（Sax 藤井淳平、Tp 佐々木克典、Bs 斎藤柊真、Ds 高本佳範）を明記。ジャズを「こよなく愛する」→「愛する」、「ジャズナンバー」→「ナンバー」など提供文の表現に合わせて更新
+- 上記いずれも meta description / OGP / Twitter Card / PROFILE 本文を一括反映
+
 ## 2026-04-25
 
 ### 変更（アクセスマップ）
