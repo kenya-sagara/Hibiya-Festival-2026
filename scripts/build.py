@@ -228,7 +228,7 @@ TEMPLATE = """<!doctype html>
     <dl class="site-footer__meta">
       <div><dt>主催</dt><dd>一般社団法人 日比谷エリアマネジメント ／ 東京ミッドタウン日比谷</dd></div>
       <div><dt>協力</dt><dd>日比谷OKUROJI</dd></div>
-      <div><dt>事務局</dt><dd>アーティストマージ</dd></div>
+      <div><dt>事務局</dt><dd><a href="https://artistmerge.jp/" target="_blank" rel="noopener noreferrer">アーティストマージ</a></dd></div>
       <div><dt>イベント運営</dt><dd>ニシヘヒガシヘ</dd></div>
     </dl>
     <p class="site-footer__copy">© 2026 HIBIYA LIVE FESTIVAL / Hibiya Area Management Association.</p>
