@@ -4,6 +4,13 @@
 
 ## 2026-04-28
 
+### 追加（後藤天太(Sax) クインテット）
+
+- 写真を追加（`assets/artists/goto-quintet.jpg`、1067×1600）
+- プロフィール文を追加：「第一線で活躍するミュージシャン達による白熱のクインテット。 最高にかっこいいステージをお届けします。 是非お見逃しなく。 メンバー 後藤天太(Sax)武藤勇樹(Key)宮本憲(Gt)森田悠介(Bs)橋本現輝(Ds)」
+- メンバー表記をプロジェクト規約（`Sax/Key/Gt/Bs/Ds`）に統一
+- index.html のアーティストグリッド、`artists/goto-quintet.html`、OGP / Twitter Card / JSON-LD MusicGroup を一括反映
+
 ### 追加（SEO 強化）
 
 検索エンジンと SNS に対する正しい情報露出を強化するため、以下を一括導入。

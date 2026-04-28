@@ -392,12 +392,12 @@
     {
       "slug": "goto-quintet",
       "name": "後藤天太(Sax) クインテット",
-      "photo": null,
+      "photo": "goto-quintet.jpg",
       "tags": [
         "クインテット",
         "サックス"
       ],
-      "desc": "",
+      "desc": "第一線で活躍するミュージシャン達による白熱のクインテット。 最高にかっこいいステージをお届けします。 是非お見逃しなく。 メンバー 後藤天太(Sax)武藤勇樹(Key)宮本憲(Gt)森田悠介(Bs)橋本現輝(Ds)",
       "slots": [
         {
           "venue": "HIBIYA FOOD HALL",
@@ -405,7 +405,9 @@
           "time": "12:00",
           "end": "12:45"
         }
-      ]
+      ],
+      "photo_width": 1067,
+      "photo_height": 1600
     },
     {
       "slug": "goto-miyamoto-duo",
