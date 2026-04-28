@@ -2,6 +2,32 @@
 
 本ファイルは HIBIYA LIVE FESTIVAL 2026 サイトの変更履歴を記録します。
 
+## 2026-04-28
+
+### 追加（SEO 強化）
+
+検索エンジンと SNS に対する正しい情報露出を強化するため、以下を一括導入。
+
+- **`sitemap.xml` の自動生成**：トップ + 全アーティスト個別ページ（計 27 URL）を網羅。`scripts/build.py` 実行時に同時生成
+- **`robots.txt`**：`Sitemap:` ディレクティブで sitemap を明示。`/_source/` はクロール対象外に
+- **構造化データ（JSON-LD）を全ページに埋め込み**
+  - トップ：`MusicEvent`（フェス全体）。`subEvent` で各出演枠を `MusicEvent` として展開し、`location` に3会場の `Place`（住所＋GeoCoordinates）、`offers.price=0` で入場無料を明示、`performer` に全アーティストを列挙
+  - 各アーティストページ：`MusicGroup`（プロフィール／写真／genre＝tags）+ `performerIn` に当該アーティストの全出演枠を `MusicEvent` として埋め込み
+- **アーティストグリッドの SSR 化**：トップの `#artistsGrid` をビルド時に静的出力するように変更。これまでは JS 描画のみで JS 非実行クローラ／一部 SNS スクレイパーには空に見えていたが、HTML だけで全 26 アーティストカード（写真・名前・出演枠・個別ページへの内部リンク）が読み取れるようになった
+  - `assets/js/main.js` は SSR 済みなら描画をスキップする条件分岐を追加（二重描画防止）
+- **favicon / apple-touch-icon を追加**
+  - `assets/favicon.svg`（ブランドカラーの "H" マーク）
+  - `assets/favicon.png`（32×32, PNG フォールバック）
+  - `assets/apple-touch-icon.png`（180×180）
+  - `scripts/gen_favicon.py` で PNG 系を再生成可能
+  - トップ・全アーティストページの `<head>` に `<link rel="icon">` / `<link rel="apple-touch-icon">` を追加
+
+### 変更（`scripts/build.py`）
+
+- `index.html` のマーカーブロック（`BEGIN:json-ld` / `BEGIN:artists-grid`）をビルド時に自動上書き
+- 会場メタ情報（住所・緯度経度）を Python 側にも保持（Leaflet 側 `assets/js/main.js` と整合）
+- 開始・終了時刻を ISO 8601（`+09:00` 付き）に変換するヘルパを追加
+
 ## 2026-04-27
 
 ### 追加・変更（柴田一輝(Key)、帆足昌太(Bs)、2人ぼっち）

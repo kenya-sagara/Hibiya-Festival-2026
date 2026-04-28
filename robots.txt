@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_source/
+
+Sitemap: https://hibiya-festival.artistmerge.jp/sitemap.xml

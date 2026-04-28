@@ -19,6 +19,7 @@
 | 13 | 多言語対応（英語） | 低 | 保留 | - | - | 要件次第 |
 | 14 | アクセス解析タグ設置 | 低 | 未着手 | - | - | GA/GTAG等 |
 | 15 | 本番ドメインへのデプロイ | 高 | 未着手 | - | - | ホスティング先確定待ち。決定後 data/artists.json の site.url を更新して build.py を再実行 |
+| 16 | SEO 強化（sitemap / robots / JSON-LD / SSR / favicon） | 高 | 完了 | 2026-04-28 | 2026-04-28 | sitemap.xml・robots.txt 生成、MusicEvent / MusicGroup の構造化データ埋め込み、アーティストグリッドの SSR 化、favicon (SVG+PNG) を追加 |
 
 ## ステータス凡例
 

@@ -38,21 +38,31 @@
 
 ```
 Hibiya-Festival-2026/
-├── index.html               # メインページ
+├── index.html               # メインページ（アーティストグリッドは build.py が SSR 上書き）
+├── robots.txt               # クローラ向けディレクティブ + sitemap 参照
+├── sitemap.xml              # 検索エンジン向けサイトマップ（build.py で自動生成）
+├── CNAME                    # GitHub Pages 用カスタムドメイン
 ├── artists/                 # 各アーティスト専用ページ（build.py で自動生成）
-│   └── <slug>.html          # OGP / Twitter Card 付き個別ページ
+│   └── <slug>.html          # OGP / Twitter Card / JSON-LD MusicGroup 付き個別ページ
 ├── assets/
 │   ├── css/
 │   │   ├── style.css        # 全体共通スタイル
 │   │   └── artist.css       # 専用ページ & シェアボタン用
 │   ├── js/
-│   │   ├── main.js          # メインページ制御（JSONフェッチ、カード生成）
+│   │   ├── main.js          # メインページ制御（SSR 済みなら描画スキップ）
 │   │   └── artist.js        # 専用ページ制御（URLコピー等）
-│   └── artists/             # 出演者写真（URLセーフな slug 名）
+│   ├── artists/             # 出演者写真（URLセーフな slug 名）
+│   ├── ogp.jpg              # サイト共通 OGP（gen_site_ogp.py で生成）
+│   ├── favicon.svg          # ブランドマーク "H" のSVG favicon
+│   ├── favicon.png          # PNG フォールバック (32×32)
+│   └── apple-touch-icon.png # iOS ホーム画面用 (180×180)
 ├── data/
 │   └── artists.json         # アーティスト情報の SSOT
 ├── scripts/
-│   └── build.py             # artists.json → 各専用ページを生成
+│   ├── build.py             # artists.json → 各専用ページ・index SSR・sitemap 生成
+│   ├── gen_site_ogp.py      # トップ用 OGP 画像（1200×630）の生成
+│   ├── gen_favicon.py       # PNG 系 favicon の生成
+│   └── optimize_photos.py   # アーティスト写真の最適化
 ├── docs/                    # 本ドキュメント群
 │   ├── OVERVIEW.md
 │   ├── SETUP.md
@@ -66,6 +76,18 @@ Hibiya-Festival-2026/
     ├── artists.zip
     └── artists_raw/
 ```
+
+## SEO / 検索エンジン対策
+
+- **`<title>` / `<meta description>` / `<link rel="canonical">`** — トップ＋全アーティストページに完備
+- **Open Graph / Twitter Card** — `summary_large_image`、画像の `width`/`height`/`alt` 完備
+- **構造化データ（JSON-LD / schema.org）**
+  - トップ：`MusicEvent`（フェス全体）。`subEvent` で各出演枠を `MusicEvent` として展開、`location` に3会場の `Place`（`PostalAddress` + `GeoCoordinates`）、`offers.price=0` で入場無料、`performer` に全アーティストを列挙
+  - 各アーティストページ：`MusicGroup` + `performerIn` に当該アーティストの全出演枠
+- **`sitemap.xml`** — 27 URL（トップ + 26 アーティストページ）。`build.py` 実行時に自動更新
+- **`robots.txt`** — sitemap 参照、`/_source/` を Disallow
+- **アーティストグリッドの SSR** — `index.html` の `#artistsGrid` をビルド時に静的生成。JS 非実行クローラ・SNS スクレイパーからも全アーティストの内部リンクが見える
+- **favicon / apple-touch-icon** — SVG（モダンブラウザ）+ PNG フォールバック
 
 ## アーティスト情報の管理フロー
 

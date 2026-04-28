@@ -40,6 +40,8 @@
   function buildArtists(data) {
     const grid = document.getElementById('artistsGrid');
     if (!grid || !data) return;
+    // SSR: skip if grid is already populated by scripts/build.py
+    if (grid.querySelector('.artist')) return;
 
     // Sort in timetable order (earliest slot day+time).
     const list = data.artists.slice().sort((a, b) => {
