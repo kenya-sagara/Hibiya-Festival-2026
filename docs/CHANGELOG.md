@@ -2,6 +2,14 @@
 
 本ファイルは HIBIYA LIVE FESTIVAL 2026 サイトの変更履歴を記録します。
 
+## 2026-04-30
+
+### 変更（Happy Flight Jazz Orchestra の写真差し替え）
+
+- 提供素材（バンド全員でのライブ写真）に差し替え（`assets/artists/happy-flight-jazz-orchestra.jpg`、943×654）
+- `data/artists.json` の `photo_width` / `photo_height` を更新
+- `artists/happy-flight-jazz-orchestra.html` の OGP / Twitter Card 画像寸法を再生成
+
 ## 2026-04-29
 
 ### 追加（総合企画 HIBIYA LIVE FESTIVAL との関係を明示）
