@@ -121,33 +121,57 @@
 }
 .slot {
   display: grid;
-  grid-template-columns: 120px 150px 1fr;
-  gap: 12px;
-  padding: 14px 0;
+  grid-template-columns: minmax(140px, auto) minmax(180px, auto) 1fr;
+  gap: 18px;
+  padding: 22px 0;
   border-bottom: 1px solid var(--line-soft);
-  align-items: baseline;
+  align-items: center;
   font-family: var(--font-disp);
-  font-size: 14px;
-  letter-spacing: .06em;
+  letter-spacing: .04em;
 }
 @media (max-width: 560px) {
   .slot {
     grid-template-columns: 1fr;
-    gap: 4px;
-    padding: 16px 0;
+    gap: 8px;
+    padding: 20px 0;
   }
 }
 .slot__day {
-  color: var(--accent);
+  font-size: clamp(20px, 2.4vw, 26px);
   font-weight: 600;
+  color: var(--accent);
+  line-height: 1.1;
 }
 .slot__time {
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 600;
   color: var(--fg);
+  line-height: 1.1;
 }
 .slot__venue {
-  color: var(--fg-mute);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: clamp(14px, 1.4vw, 17px);
   font-family: var(--font-jp);
   font-weight: 500;
+  color: var(--fg-mute);
+  line-height: 1.4;
+}
+.slot__venue-pin {
+  font-size: .9em;
+  flex-shrink: 0;
+}
+a.slot__venue--link {
+  color: var(--accent);
+  border-bottom: 1px dashed rgba(232, 182, 77, .35);
+  padding-bottom: 1px;
+  text-decoration: none;
+}
+a.slot__venue--link:hover {
+  border-bottom-color: var(--accent);
+  border-bottom-style: solid;
+  opacity: 1;
 }
 
 .artist-hero__cta {
@@ -356,5 +380,223 @@
 .artist-pager__back:hover {
   background: var(--accent);
   color: var(--bg);
+  opacity: 1;
+}
+
+/* festival info banner (per-artist) */
+.festival-info {
+  max-width: var(--maxw);
+  margin: clamp(56px, 7vw, 96px) auto 0;
+  padding: clamp(24px, 3vw, 36px) var(--pad);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px 32px;
+  align-items: center;
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+  background: rgba(232, 182, 77, .03);
+}
+@media (max-width: 720px) {
+  .festival-info {
+    grid-template-columns: 1fr;
+  }
+}
+.festival-info__list {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px 32px;
+}
+.festival-info__list > div {
+  display: grid;
+  gap: 6px;
+}
+.festival-info__list dt {
+  font-family: var(--font-disp);
+  font-size: 11px;
+  letter-spacing: .3em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+.festival-info__list dd {
+  margin: 0;
+  font-family: var(--font-disp);
+  font-size: clamp(16px, 1.7vw, 20px);
+  font-weight: 600;
+  color: var(--fg);
+  letter-spacing: .04em;
+}
+.festival-info__list dd em {
+  font-style: italic;
+  color: var(--accent);
+  font-family: var(--font-en);
+  padding: 0 2px;
+}
+.festival-info__list dd small {
+  display: block;
+  font-family: var(--font-jp);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--fg-mute);
+  letter-spacing: .02em;
+  margin-top: 4px;
+}
+.festival-info__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  font-family: var(--font-disp);
+  font-size: 12px;
+  letter-spacing: .22em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  text-transform: uppercase;
+  transition: background .25s var(--ease), color .25s var(--ease);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.festival-info__cta:hover {
+  background: var(--accent);
+  color: var(--bg);
+  opacity: 1;
+}
+
+/* per-artist venues & access */
+.artist-venues {
+  max-width: var(--maxw);
+  margin: clamp(56px, 7vw, 96px) auto 0;
+  padding: 0 var(--pad);
+}
+.artist-venues__head {
+  margin-bottom: clamp(28px, 3.5vw, 40px);
+}
+.artist-venues__eyebrow {
+  font-family: var(--font-disp);
+  font-size: 12px;
+  letter-spacing: .4em;
+  color: var(--accent);
+  margin: 0 0 12px;
+  padding-left: 56px;
+  position: relative;
+  text-transform: uppercase;
+}
+.artist-venues__eyebrow::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 50%;
+  width: 40px; height: 1px;
+  background: var(--accent);
+}
+.artist-venues__title {
+  margin: 0 0 8px;
+  font-family: var(--font-disp);
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 600;
+  letter-spacing: .04em;
+}
+.artist-venues__lead {
+  margin: 0;
+  color: var(--fg-mute);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.artist-venues__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.venue-card {
+  position: relative;
+  padding: 24px 22px 20px;
+  border: 1px solid var(--line-soft);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scroll-margin-top: 100px;
+}
+.venue-card--highlight {
+  border-color: var(--accent);
+  background: linear-gradient(180deg, rgba(232, 182, 77, .08), rgba(232, 182, 77, .02));
+  box-shadow: 0 0 0 1px var(--accent) inset;
+}
+.venue-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.venue-card__num {
+  font-family: var(--font-disp);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--accent);
+  line-height: 1;
+}
+.venue-card__flag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-family: var(--font-disp);
+  font-size: 10px;
+  letter-spacing: .25em;
+  font-weight: 600;
+  color: var(--bg);
+  background: var(--accent);
+  text-transform: uppercase;
+}
+.venue-card__name {
+  margin: 0;
+  font-family: var(--font-jp);
+  font-size: clamp(16px, 1.7vw, 19px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--fg);
+}
+.venue-card__meta {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.venue-card__meta > div {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.venue-card__meta dt {
+  font-family: var(--font-disp);
+  font-size: 10px;
+  letter-spacing: .25em;
+  color: var(--accent);
+  padding-top: 3px;
+}
+.venue-card__meta dd {
+  margin: 0;
+  color: var(--fg-mute);
+}
+.venue-card__map {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  font-family: var(--font-disp);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  color: var(--accent);
+  border: 1px solid var(--line-soft);
+  text-transform: uppercase;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: border-color .25s var(--ease), background .25s var(--ease);
+}
+.venue-card__map:hover {
+  border-color: var(--accent);
+  background: rgba(232, 182, 77, .08);
   opacity: 1;
 }

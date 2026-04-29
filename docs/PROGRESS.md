@@ -21,6 +21,7 @@
 | 15 | 本番ドメインへのデプロイ | 高 | 未着手 | - | - | ホスティング先確定待ち。決定後 data/artists.json の site.url を更新して build.py を再実行 |
 | 16 | SEO 強化（sitemap / robots / JSON-LD / SSR / favicon） | 高 | 完了 | 2026-04-28 | 2026-04-28 | sitemap.xml・robots.txt 生成、MusicEvent / MusicGroup の構造化データ埋め込み、アーティストグリッドの SSR 化、favicon (SVG+PNG) を追加 |
 | 17 | 総合企画（HIBIYA LIVE FESTIVAL）との関係を明示 | 中 | 完了 | 2026-04-29 | 2026-04-29 | Hero冠ラベル / About注記 / フッター行 / JSON-LD `superEvent` の4点で関係を提示。Aboutの説明を「演劇＋音楽の都市型エンターテインメント・フェスティバル」に更新。Hero / About の「2日間」表現は HIBIYA LIVE FESTIVAL 全体（4.25-5.31）と読み取られないよう書き換え |
+| 18 | アーティスト個別ページの自己完結化（開催情報＋アクセス） | 中 | 完了 | 2026-04-30 | 2026-04-30 | Hero の日時・会場サイズアップ、EVENT INFO バナー、VENUE & ACCESS セクション（出演会場ハイライト＋Google Maps リンク）を追加 |
 
 ## ステータス凡例
 

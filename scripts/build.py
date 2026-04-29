@@ -38,26 +38,41 @@ PARENT_EVENT_NAME = "HIBIYA LIVE FESTIVAL"
 PARENT_EVENT_URL = "https://www.hibiya.tokyo-midtown.com/hibiya-live-festival/"
 
 # Venues (single source of truth — kept in sync with assets/js/main.js)
+# - num/anchor/stations are used only by per-artist pages (Venue & Access section)
 VENUES = {
     "日比谷ステップ広場": {
         "name": "日比谷ステップ広場 特設ステージ",
         "address": "東京都千代田区有楽町1-1-2",
+        "stations": "東京メトロ日比谷駅 A11出口直結 ／ JR有楽町駅 徒歩約5分",
+        "num": "01",
+        "anchor": "venue-step",
         "lat": 35.673798,
         "lng": 139.760017,
     },
     "HIBIYA FOOD HALL": {
         "name": "HIBIYA FOOD HALL（東京ミッドタウン日比谷 B1F）",
         "address": "東京都千代田区有楽町1-1-2 東京ミッドタウン日比谷 B1F",
+        "stations": "東京ミッドタウン日比谷 B1F ／ 東京メトロ日比谷駅直結",
+        "num": "02",
+        "anchor": "venue-foodhall",
         "lat": 35.674044,
         "lng": 139.759613,
     },
     "日比谷OKUROJI": {
         "name": "日比谷OKUROJI",
         "address": "東京都千代田区内幸町1-7",
+        "stations": "JR新橋駅 徒歩約4分 ／ JR有楽町駅 徒歩約4分 ／ 東京メトロ内幸町駅 徒歩約3分",
+        "num": "03",
+        "anchor": "venue-okuroji",
         "lat": 35.671306,
         "lng": 139.759593,
     },
 }
+
+
+def gmaps_url(address: str) -> str:
+    """Google Maps deep link that opens in the device's default map app."""
+    return f"https://www.google.com/maps/search/?api=1&query={up.quote(address, safe='')}"
 
 
 def esc(s: str) -> str:
@@ -106,14 +121,85 @@ def build_photo_html(photo: str | None, name: str, web_root: str) -> str:
 def build_slots_html(slots: list[dict]) -> str:
     rows = []
     for s in slots:
+        v_info = VENUES.get(s["venue"], {})
+        anchor = v_info.get("anchor", "")
+        if anchor:
+            venue_html = (
+                f'<a class="slot__venue slot__venue--link" href="#{anchor}">'
+                f'<span class="slot__venue-pin" aria-hidden="true">📍</span>'
+                f'<span>{esc(s["venue"])}</span>'
+                f'</a>'
+            )
+        else:
+            venue_html = f'<span class="slot__venue">{esc(s["venue"])}</span>'
         rows.append(
             f'<li class="slot">'
             f'<span class="slot__day">{esc(s["day"])}</span>'
             f'<span class="slot__time">{esc(s["time"])} – {esc(s.get("end", ""))}</span>'
-            f'<span class="slot__venue">{esc(s["venue"])}</span>'
+            f'{venue_html}'
             f"</li>"
         )
     return "\n".join(rows)
+
+
+def build_festival_info_html() -> str:
+    """Compact event info banner shown on per-artist pages."""
+    return (
+        '<section class="festival-info" aria-label="開催情報">'
+        '<dl class="festival-info__list">'
+        '<div><dt>DATE</dt><dd>2026.05.16 <em>SAT</em> — 05.17 <em>SUN</em></dd></div>'
+        '<div><dt>VENUES</dt><dd>3会場 <small>日比谷ステップ広場 ／ HIBIYA FOOD HALL ／ 日比谷OKUROJI</small></dd></div>'
+        '<div><dt>ADMISSION</dt><dd>FREE <small>入場無料</small></dd></div>'
+        '</dl>'
+        '<a class="festival-info__cta" href="../index.html#schedule">'
+        '全タイムテーブルを見る<span aria-hidden="true">↗</span>'
+        '</a>'
+        '</section>'
+    )
+
+
+def build_venues_access_html(artist: dict) -> str:
+    """Per-artist venue & access section. Highlights the artist's own venues."""
+    artist_venues = {s["venue"] for s in artist["slots"]}
+    cards = []
+    for key, v in VENUES.items():
+        is_highlight = key in artist_venues
+        card_cls = "venue-card"
+        if is_highlight:
+            card_cls += " venue-card--highlight"
+        flag_html = (
+            '<span class="venue-card__flag" aria-label="このアーティストの出演会場">出演</span>'
+            if is_highlight
+            else ""
+        )
+        cards.append(
+            f'<article class="{card_cls}" id="{v["anchor"]}">'
+            f'<div class="venue-card__head">'
+            f'<span class="venue-card__num">{v["num"]}</span>'
+            f"{flag_html}"
+            f"</div>"
+            f'<h3 class="venue-card__name">{esc(v["name"])}</h3>'
+            f'<dl class="venue-card__meta">'
+            f'<div><dt>住所</dt><dd>{esc(v["address"])}</dd></div>'
+            f'<div><dt>アクセス</dt><dd>{esc(v["stations"])}</dd></div>'
+            f"</dl>"
+            f'<a class="venue-card__map" href="{esc(gmaps_url(v["address"]))}" '
+            f'target="_blank" rel="noopener noreferrer">'
+            f'Google Maps で開く<span aria-hidden="true">↗</span>'
+            f"</a>"
+            f"</article>"
+        )
+    cards_html = "\n          ".join(cards)
+    return (
+        '<section class="artist-venues" aria-labelledby="venues-title">'
+        '<header class="artist-venues__head">'
+        '<p class="artist-venues__eyebrow">VENUE &amp; ACCESS</p>'
+        '<h2 class="artist-venues__title" id="venues-title">アクセス</h2>'
+        '<p class="artist-venues__lead">出演会場をゴールドでハイライト。各カードから Google Maps を開けます。</p>'
+        '</header>'
+        f'<div class="artist-venues__list">\n          {cards_html}\n        </div>'
+        '</section>'
+    )
 
 
 def build_share_urls(page_url: str, text: str) -> dict:
@@ -505,6 +591,10 @@ TEMPLATE = """<!doctype html>
 
   {profile_section}
 
+  {festival_info_section}
+
+  {venues_access_section}
+
   <section class="artist-share" aria-labelledby="share-title">
     <h2 class="artist-share__title" id="share-title">SHARE</h2>
     <p class="artist-share__lead">このアーティストを応援しよう。</p>
@@ -641,6 +731,8 @@ def main() -> int:
             tags_html=tags_html,
             slots_html=build_slots_html(slots),
             profile_section=profile_section,
+            festival_info_section=build_festival_info_html(),
+            venues_access_section=build_venues_access_html(a),
             share_x=esc(shares["x"]),
             share_line=esc(shares["line"]),
             share_facebook=esc(shares["facebook"]),

@@ -4,6 +4,18 @@
 
 ## 2026-04-30
 
+### 追加（アーティスト個別ページの自己完結化：開催情報＋会場アクセス）
+
+SNS から個別ページに直接来訪した人でも、戻らずに「いつ・どこで・どう行くか」が分かるよう、各ページに以下を追加。
+
+- **Hero の日時・会場をサイズアップ**：`.slot__day` `.slot__time` を 14px → `clamp(20-24px, 2.4vw, 26-28px)` の display フォントに拡大。会場名にピン絵文字（📍）と、当該会場カードへのアンカーリンクを付与
+- **EVENT INFO バナー**：開催期間（5.16 SAT — 5.17 SUN）／ 3会場 ／ 入場無料 を、PROFILE の下に告知バナーとして配置。`全タイムテーブルを見る ↗` のCTAでメインページの SCHEDULE へ
+- **VENUE & ACCESS セクション**：3会場のカード（番号 / 会場名 / 住所 / 最寄駅 / Google Maps リンク）を表示。当該アーティストの出演会場には `venue-card--highlight` を付与し、ゴールド枠＋背景＋「出演」フラグで強調。Hero の会場名タップで対応カードへスクロール（`scroll-margin-top: 100px` 付き）
+- **Google Maps ディープリンク**：`https://www.google.com/maps/search/?api=1&query=<encoded address>` を `gmaps_url()` ヘルパで生成。端末標準のマップで開ける
+- **Leaflet は意図的に載せない**：26 ページ × Leaflet.js（38KB）＋ CARTO タイルは過大。インタラクティブマップはメインページに集約し、個別ページはカード＋ Maps リンクで軽量に
+- **`scripts/build.py`**：`VENUES` 辞書に `stations` / `num` / `anchor` を追加。`build_festival_info_html()` / `build_venues_access_html(artist)` を新設し、TEMPLATE に差し込み
+- **`assets/css/artist.css`**：`.slot` の刷新と、`.festival-info` / `.artist-venues` / `.venue-card`（含 `--highlight` 装飾）のスタイルを追加
+
 ### 変更（Happy Flight Jazz Orchestra の写真差し替え）
 
 - 提供素材（バンド全員でのライブ写真）に差し替え（`assets/artists/happy-flight-jazz-orchestra.jpg`、943×654）
