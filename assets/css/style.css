@@ -231,6 +231,28 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   height: 1px;
   background: var(--accent);
 }
+.hero__eyebrow-parent {
+  color: var(--accent);
+  border-bottom: 1px solid rgba(232, 182, 77, .35);
+  padding-bottom: 1px;
+}
+.hero__eyebrow-parent:hover { border-bottom-color: var(--accent); opacity: 1; }
+.hero__eyebrow-ext {
+  display: inline-block;
+  margin-left: .35em;
+  font-size: .85em;
+  letter-spacing: 0;
+  transform: translateY(-1px);
+}
+.hero__eyebrow-sep {
+  display: inline-block;
+  margin: 0 .6em;
+  color: var(--fg-mute);
+  opacity: .5;
+}
+.hero__eyebrow-edition {
+  color: var(--fg-mute);
+}
 
 .hero__title {
   margin: 0;
@@ -444,6 +466,37 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   color: var(--fg-mute);
 }
 .about__body p + p { margin-top: 20px; }
+
+.about__parent {
+  margin-top: 32px;
+  padding: 20px 24px;
+  border: 1px solid var(--line-soft);
+  border-left: 2px solid var(--accent);
+  background: rgba(232, 182, 77, .04);
+  max-width: 800px;
+}
+.about__parent-eyebrow {
+  margin: 0 0 8px;
+  font-family: var(--font-disp);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .3em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+.about__parent-body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--fg-mute);
+}
+.about__parent-body a {
+  color: var(--accent);
+  border-bottom: 1px solid rgba(232, 182, 77, .35);
+  padding-bottom: 1px;
+}
+.about__parent-body a:hover { border-bottom-color: var(--accent); opacity: 1; }
+.about__parent-body a span { margin-left: .25em; font-size: .85em; }
 
 .stats {
   list-style: none;

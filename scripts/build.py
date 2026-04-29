@@ -33,6 +33,10 @@ MAX_OG_DESC = 180  # characters
 EVENT_START_DATE = "2026-05-16"
 EVENT_END_DATE = "2026-05-17"
 
+# Parent event (umbrella program that this site's edition belongs to)
+PARENT_EVENT_NAME = "HIBIYA LIVE FESTIVAL"
+PARENT_EVENT_URL = "https://www.hibiya.tokyo-midtown.com/hibiya-live-festival/"
+
 # Venues (single source of truth — kept in sync with assets/js/main.js)
 VENUES = {
     "日比谷ステップ広場": {
@@ -278,6 +282,11 @@ def build_event_jsonld(artists: list[dict], site_url: str, site_name: str, site_
             }
             for a in artists
         ],
+        "superEvent": {
+            "@type": "MusicEvent",
+            "name": PARENT_EVENT_NAME,
+            "url": PARENT_EVENT_URL,
+        },
         "subEvent": sub_events,
     }
 
@@ -531,6 +540,7 @@ TEMPLATE = """<!doctype html>
       <p class="site-footer__date">2026.05.16 SAT — 05.17 SUN</p>
     </div>
     <dl class="site-footer__meta">
+      <div><dt>公式企画</dt><dd><a href="https://www.hibiya.tokyo-midtown.com/hibiya-live-festival/" target="_blank" rel="noopener noreferrer">HIBIYA LIVE FESTIVAL<span aria-hidden="true">↗</span></a></dd></div>
       <div><dt>主催</dt><dd>一般社団法人 日比谷エリアマネジメント ／ 東京ミッドタウン日比谷</dd></div>
       <div><dt>協力</dt><dd>日比谷OKUROJI</dd></div>
       <div><dt>事務局</dt><dd><a href="https://artistmerge.jp/" target="_blank" rel="noopener noreferrer">アーティストマージ</a></dd></div>
