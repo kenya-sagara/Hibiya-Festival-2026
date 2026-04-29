@@ -4,16 +4,20 @@
 
 ## 2026-04-29
 
-### 追加（親イベントとの関係を明示）
+### 追加（公式企画 HIBIYA LIVE FESTIVAL との関係を明示）
 
-本サイトは東京ミッドタウン日比谷／日比谷エリアマネジメントが運営する音楽企画 [HIBIYA LIVE FESTIVAL](https://www.hibiya.tokyo-midtown.com/hibiya-live-festival/) の 2026 年版「MUSIC WEEKEND」であることを、視覚・構造化データの両面で明示。
+本サイトは東京ミッドタウン日比谷／日比谷エリアマネジメントが運営する [HIBIYA LIVE FESTIVAL](https://www.hibiya.tokyo-midtown.com/hibiya-live-festival/) の 2026 年版「MUSIC WEEKEND」であることを、視覚・構造化データの両面で明示。
 
-- **ヒーローの冠ラベル**：`HIBIYA FESTIVAL 2026 / MUSIC WEEKEND` を `HIBIYA LIVE FESTIVAL ↗ / 2026 MUSIC WEEKEND` に変更し、親企画名は親サイトへの外部リンクに（`target="_blank" rel="noopener noreferrer"`）
-- **About セクション**：本文末尾に `PART OF` ラベル付きの注記ブロックを追加し、本イベントが親企画 HIBIYA LIVE FESTIVAL の一環であることと、親サイトへの導線を1段落で明記
-- **フッター**：`公式企画` 行を新設し、親サイトへの恒常リンクを配置（`主催 / 協力 / 事務局 / イベント運営` の上）
-- **構造化データ（JSON-LD）**：トップページ `MusicEvent` に `superEvent`（`@type: MusicEvent`, `name: "HIBIYA LIVE FESTIVAL"`, 親URL）を追加。これにより `親プログラム → 2026年版 → 各ライブ枠`（`subEvent`）の3階層の親子関係が検索エンジンに正しく伝わるように
-- **`scripts/build.py`**：親イベント名／URLを定数化（`PARENT_EVENT_NAME` / `PARENT_EVENT_URL`）。アーティスト個別ページの TEMPLATE フッターにも同じ「公式企画」行を反映
+- **ヒーローの冠ラベル**：`HIBIYA FESTIVAL 2026 / MUSIC WEEKEND` を `HIBIYA LIVE FESTIVAL ↗ / 2026 MUSIC WEEKEND` に変更し、公式企画名は公式サイトへの外部リンクに（`target="_blank" rel="noopener noreferrer"`）
+- **About セクション**：本文末尾に `PART OF` ラベル付きの注記ブロックを追加し、本イベントが公式企画 HIBIYA LIVE FESTIVAL の一環であることと、公式サイトへの導線を1段落で明記。説明は「演劇」と「音楽」を軸とする都市型エンターテインメント・フェスティバルである旨を反映
+- **フッター**：`公式企画` 行を新設し、公式サイトへの恒常リンクを配置（`主催 / 協力 / 事務局 / イベント運営` の上）
+- **構造化データ（JSON-LD）**：トップページ `MusicEvent` に `superEvent`（`@type: MusicEvent`, `name: "HIBIYA LIVE FESTIVAL"`, 公式企画URL）を追加。これにより `公式企画 → 2026年版 → 各ライブ枠`（`subEvent`）の 3 階層の関係が検索エンジンに正しく伝わるように
+- **`scripts/build.py`**：公式企画名／URLを定数化（`PARENT_EVENT_NAME` / `PARENT_EVENT_URL`、内部識別子のため Schema.org の `superEvent` 命名を踏襲）。アーティスト個別ページの TEMPLATE フッターにも同じ「公式企画」行を反映
 - **CSS**：`.hero__eyebrow-parent` / `.about__parent` のスタイルを追加（ゴールド・アンダーライン＋枠線で控えめに強調）
+
+### 変更（文言の統一：「親」→「公式」）
+
+ユーザー向け文言の「親イベント／親企画／親サイト」表記を、フッターで採用済みの「公式企画／公式サイト」に統一（`index.html` の About 注記ブロックと aria-label、`docs/` 各ファイル）。`scripts/build.py` 内のコード識別子 `PARENT_EVENT_*` は Schema.org の `superEvent` に対応する内部命名として据え置き。
 
 ## 2026-04-28
 
