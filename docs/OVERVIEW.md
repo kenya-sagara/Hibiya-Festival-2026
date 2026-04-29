@@ -4,7 +4,7 @@
 
 2026年5月16日(土)・17日(日)に開催される「HIBIYA LIVE FESTIVAL 2026（Hibiya Festival 2026 MUSIC WEEKEND）」の情報発信用・告知用の静的ウェブサイト。
 
-本イベントは、東京ミッドタウン日比谷／日比谷エリアマネジメントが「演劇」と「音楽」を軸に日比谷エリアで展開する都市型エンターテインメント・フェスティバル [HIBIYA LIVE FESTIVAL](https://www.hibiya.tokyo-midtown.com/hibiya-live-festival/) の 2026 年版「MUSIC WEEKEND」として位置づけられる。サイト上は Hero 冠ラベル／About 注記ブロック／フッター「公式企画」行／JSON-LD の `superEvent` プロパティの 4 点で公式企画との関係を提示している。
+本イベントは、東京ミッドタウン日比谷／日比谷エリアマネジメントが「演劇」と「音楽」を軸に日比谷エリアで展開する都市型エンターテインメント・フェスティバル [HIBIYA LIVE FESTIVAL](https://www.hibiya.tokyo-midtown.com/hibiya-live-festival/) の 2026 年版「MUSIC WEEKEND」として位置づけられる。サイト上は Hero 冠ラベル／About 注記ブロック／フッター「総合企画」行／JSON-LD の `superEvent` プロパティの 4 点で総合企画との関係を提示している。
 
 ## 主要コンテンツ
 

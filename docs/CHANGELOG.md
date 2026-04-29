@@ -4,20 +4,32 @@
 
 ## 2026-04-29
 
-### 追加（公式企画 HIBIYA LIVE FESTIVAL との関係を明示）
+### 追加（総合企画 HIBIYA LIVE FESTIVAL との関係を明示）
 
 本サイトは東京ミッドタウン日比谷／日比谷エリアマネジメントが運営する [HIBIYA LIVE FESTIVAL](https://www.hibiya.tokyo-midtown.com/hibiya-live-festival/) の 2026 年版「MUSIC WEEKEND」であることを、視覚・構造化データの両面で明示。
 
-- **ヒーローの冠ラベル**：`HIBIYA FESTIVAL 2026 / MUSIC WEEKEND` を `HIBIYA LIVE FESTIVAL ↗ / 2026 MUSIC WEEKEND` に変更し、公式企画名は公式サイトへの外部リンクに（`target="_blank" rel="noopener noreferrer"`）
-- **About セクション**：本文末尾に `PART OF` ラベル付きの注記ブロックを追加し、本イベントが公式企画 HIBIYA LIVE FESTIVAL の一環であることと、公式サイトへの導線を1段落で明記。説明は「演劇」と「音楽」を軸とする都市型エンターテインメント・フェスティバルである旨を反映
-- **フッター**：`公式企画` 行を新設し、公式サイトへの恒常リンクを配置（`主催 / 協力 / 事務局 / イベント運営` の上）
-- **構造化データ（JSON-LD）**：トップページ `MusicEvent` に `superEvent`（`@type: MusicEvent`, `name: "HIBIYA LIVE FESTIVAL"`, 公式企画URL）を追加。これにより `公式企画 → 2026年版 → 各ライブ枠`（`subEvent`）の 3 階層の関係が検索エンジンに正しく伝わるように
-- **`scripts/build.py`**：公式企画名／URLを定数化（`PARENT_EVENT_NAME` / `PARENT_EVENT_URL`、内部識別子のため Schema.org の `superEvent` 命名を踏襲）。アーティスト個別ページの TEMPLATE フッターにも同じ「公式企画」行を反映
+- **ヒーローの冠ラベル**：`HIBIYA FESTIVAL 2026 / MUSIC WEEKEND` を `HIBIYA LIVE FESTIVAL ↗ / 2026 MUSIC WEEKEND` に変更し、総合企画名は HIBIYA LIVE FESTIVAL ページへの外部リンクに（`target="_blank" rel="noopener noreferrer"`）
+- **About セクション**：本文末尾に `PART OF` ラベル付きの注記ブロックを追加し、本イベントが総合企画 HIBIYA LIVE FESTIVAL の一環であることと、総合ページへの導線を1段落で明記。説明は「演劇」と「音楽」を軸とする都市型エンターテインメント・フェスティバルである旨を反映
+- **フッター**：`総合企画` 行を新設し、HIBIYA LIVE FESTIVAL ページへの恒常リンクを配置（`主催 / 協力 / 事務局 / イベント運営` の上）
+- **構造化データ（JSON-LD）**：トップページ `MusicEvent` に `superEvent`（`@type: MusicEvent`, `name: "HIBIYA LIVE FESTIVAL"`, 総合企画URL）を追加。これにより `総合企画 → 2026年版 → 各ライブ枠`（`subEvent`）の 3 階層の関係が検索エンジンに正しく伝わるように
+- **`scripts/build.py`**：総合企画名／URLを定数化（`PARENT_EVENT_NAME` / `PARENT_EVENT_URL`、内部識別子のため Schema.org の `superEvent` 命名を踏襲）。アーティスト個別ページの TEMPLATE フッターにも同じ「総合企画」行を反映
 - **CSS**：`.hero__eyebrow-parent` / `.about__parent` のスタイルを追加（ゴールド・アンダーライン＋枠線で控えめに強調）
 
-### 変更（文言の統一：「親」→「公式」）
+### 変更（文言の統一：「親」→「総合」）
 
-ユーザー向け文言の「親イベント／親企画／親サイト」表記を、フッターで採用済みの「公式企画／公式サイト」に統一（`index.html` の About 注記ブロックと aria-label、`docs/` 各ファイル）。`scripts/build.py` 内のコード識別子 `PARENT_EVENT_*` は Schema.org の `superEvent` に対応する内部命名として据え置き。
+ユーザー向け文言の「親イベント／親企画／親サイト」表記をいったん「公式企画／公式サイト」に統一したが、本サイト（`hibiya-festival.artistmerge.jp`）も MUSIC WEEKEND の公式サイトであるため誤解を招く。`HIBIYA LIVE FESTIVAL`（4.25–5.31 にわたる総合企画）と区別するため、最終的に「**総合企画／総合ページ**」に統一。
+
+- `index.html`：About 注記ブロック本文・aria-label・フッター行ラベル
+- `scripts/build.py`：アーティスト個別ページ TEMPLATE のフッター行ラベル
+- `docs/` 各ファイル
+- `scripts/build.py` 内のコード識別子 `PARENT_EVENT_*` は Schema.org の `superEvent` に対応する内部命名として据え置き
+
+### 変更（「2日間」表現を緩和）
+
+本サイトは MUSIC WEEKEND（5.16–5.17 の 2 日間）を扱うが、ヒーロー見出しが `HIBIYA LIVE FESTIVAL` であるため、「2日間」と書くと総合企画自体が 2 日間と誤読される。総合企画は 4.25–5.31 にわたるため、以下を変更：
+
+- **Hero タグライン**：`街が、ステージになる2日間。` → `音楽の週末、街がステージになる。`
+- **About 本文**：`歴史と文化が息づく日比谷エリアを舞台に、週末の2日間、街全体がひとつのライブ会場になる。` → `歴史と文化が息づく日比谷エリアを舞台に、5月の週末、街全体がひとつのライブ会場になる。`
 
 ## 2026-04-28
 
