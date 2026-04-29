@@ -70,9 +70,13 @@ VENUES = {
 }
 
 
-def gmaps_url(address: str) -> str:
-    """Google Maps deep link that opens in the device's default map app."""
-    return f"https://www.google.com/maps/search/?api=1&query={up.quote(address, safe='')}"
+def gmaps_url(lat: float, lng: float) -> str:
+    """Google Maps deep link pinned to exact coordinates.
+
+    Using lat/lng (instead of address text) keeps the pin in sync with the
+    main-page Leaflet map and avoids Google's address geocoding drift.
+    """
+    return f"https://www.google.com/maps/search/?api=1&query={lat},{lng}"
 
 
 def esc(s: str) -> str:
@@ -183,7 +187,7 @@ def build_venues_access_html(artist: dict) -> str:
             f'<div><dt>住所</dt><dd>{esc(v["address"])}</dd></div>'
             f'<div><dt>アクセス</dt><dd>{esc(v["stations"])}</dd></div>'
             f"</dl>"
-            f'<a class="venue-card__map" href="{esc(gmaps_url(v["address"]))}" '
+            f'<a class="venue-card__map" href="{esc(gmaps_url(v["lat"], v["lng"]))}" '
             f'target="_blank" rel="noopener noreferrer">'
             f'Google Maps で開く<span aria-hidden="true">↗</span>'
             f"</a>"
