@@ -4,6 +4,24 @@
 
 ## 2026-04-30
 
+### 修正（Search Console 指摘の構造化データ不足を解消）
+
+Google Search Console から「イベントの構造化データ」で 11 件の問題（重大: `location` / `startDate` 欠落、非重大: `description` / `image` / `url` / `organizer.url` / `offers.validFrom` 欠落）を指摘。トップページ `MusicEvent` の `subEvent`（各ライブ枠）に必須フィールドを追加し、`organizer` にも `url` を付与して解消。
+
+- **subEvent（`scripts/build.py` の `build_event_subevent`）に追加**
+  - `description`：`{アーティスト名} のライブ — {日} {時刻} @ {会場}｜HIBIYA LIVE FESTIVAL 2026 MUSIC WEEKEND（入場無料）`
+  - `image`：アーティスト写真の絶対 URL（写真未設定の場合はサイト共通 OGP）
+  - `url`：当該アーティスト個別ページの絶対 URL（`offers.url` も同 URL に変更し、入場枠ごとのチケット相当URLを示す）
+  - `organizer.url`：日比谷エリアマネジメント → HIBIYA LIVE FESTIVAL 公式ページ
+  - `offers.validFrom`：イベント開始日（`2026-05-16T00:00:00+09:00`）
+- **トップレベル `organizer` に `url` 追加**
+  - `一般社団法人 日比谷エリアマネジメント` → `https://www.hibiya.tokyo-midtown.com/hibiya-live-festival/`
+  - `東京ミッドタウン日比谷` → `https://www.hibiya.tokyo-midtown.com/`
+- **`scripts/build.py`**：組織URLを `ORG_URLS` 定数として一元化し、トップレベルとサブイベントの両方で参照
+- アーティスト個別ページの `MusicGroup.performerIn` も `build_event_subevent` を共有しているため、26 ページ分の構造化データが同時に修正される
+
+なお `location` / `startDate` の「重大」指摘は、subEvent 側にも本来含まれていたが、上位フィールド不足を Google が複合的に検出していたものと思われる。今回の補完により全項目が満たされた状態となる。
+
 ### 追加（アーティスト個別ページの自己完結化：開催情報＋会場アクセス）
 
 SNS から個別ページに直接来訪した人でも、戻らずに「いつ・どこで・どう行くか」が分かるよう、各ページに以下を追加。

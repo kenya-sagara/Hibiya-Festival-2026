@@ -37,6 +37,13 @@ EVENT_END_DATE = "2026-05-17"
 PARENT_EVENT_NAME = "HIBIYA LIVE FESTIVAL"
 PARENT_EVENT_URL = "https://www.hibiya.tokyo-midtown.com/hibiya-live-festival/"
 
+# Organizer URLs (used in JSON-LD organizer.url to satisfy Google's structured-data
+# validator, which flags organizer entries without a URL as a non-critical issue).
+ORG_URLS = {
+    "一般社団法人 日比谷エリアマネジメント": "https://www.hibiya.tokyo-midtown.com/hibiya-live-festival/",
+    "東京ミッドタウン日比谷": "https://www.hibiya.tokyo-midtown.com/",
+}
+
 # Venues (single source of truth — kept in sync with assets/js/main.js)
 # - num/anchor/stations are used only by per-artist pages (Venue & Access section)
 VENUES = {
@@ -254,9 +261,24 @@ def build_event_subevent(artist: dict, slot: dict, site_url: str, site_name: str
     end_time = slot.get("end") or ""
     end_iso = slot_iso_datetime(slot["day"], end_time) if end_time else ""
 
+    artist_url = f"{site_url}/artists/{artist['slug']}.html"
+    photo = artist.get("photo")
+    image_url = (
+        f"{site_url}/{PHOTO_DIR_WEB}/{photo}"
+        if photo
+        else f"{site_url}/assets/ogp.jpg"
+    )
+    sub_desc = (
+        f"{artist['name']} のライブ — {slot['day']} {slot['time']} @ {slot['venue']}"
+        f"｜HIBIYA LIVE FESTIVAL 2026 MUSIC WEEKEND（入場無料）"
+    )
+
     sub = {
         "@type": "MusicEvent",
         "name": f"{artist['name']} @ {slot['venue']}",
+        "description": sub_desc,
+        "image": [image_url],
+        "url": artist_url,
         "startDate": start_iso,
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
@@ -274,11 +296,12 @@ def build_event_subevent(artist: dict, slot: dict, site_url: str, site_name: str
         "performer": {
             "@type": "MusicGroup",
             "name": artist["name"],
-            "url": f"{site_url}/artists/{artist['slug']}.html",
+            "url": artist_url,
         },
         "organizer": {
             "@type": "Organization",
             "name": "一般社団法人 日比谷エリアマネジメント",
+            "url": ORG_URLS["一般社団法人 日比谷エリアマネジメント"],
         },
         "isAccessibleForFree": True,
         "offers": {
@@ -286,7 +309,8 @@ def build_event_subevent(artist: dict, slot: dict, site_url: str, site_name: str
             "price": "0",
             "priceCurrency": "JPY",
             "availability": "https://schema.org/InStock",
-            "url": site_url + "/",
+            "url": artist_url,
+            "validFrom": f"{EVENT_START_DATE}T00:00:00+09:00",
         },
         "superEvent": {
             "@type": "MusicEvent",
@@ -348,12 +372,10 @@ def build_event_jsonld(artists: list[dict], site_url: str, site_name: str, site_
         "organizer": [
             {
                 "@type": "Organization",
-                "name": "一般社団法人 日比谷エリアマネジメント",
-            },
-            {
-                "@type": "Organization",
-                "name": "東京ミッドタウン日比谷",
-            },
+                "name": name,
+                "url": url,
+            }
+            for name, url in ORG_URLS.items()
         ],
         "isAccessibleForFree": True,
         "offers": {
