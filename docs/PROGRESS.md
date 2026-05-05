@@ -22,6 +22,8 @@
 | 16 | SEO 強化（sitemap / robots / JSON-LD / SSR / favicon） | 高 | 完了 | 2026-04-28 | 2026-04-28 | sitemap.xml・robots.txt 生成、MusicEvent / MusicGroup の構造化データ埋め込み、アーティストグリッドの SSR 化、favicon (SVG+PNG) を追加 |
 | 17 | 総合企画（HIBIYA LIVE FESTIVAL）との関係を明示 | 中 | 完了 | 2026-04-29 | 2026-04-29 | Hero冠ラベル / About注記 / フッター行 / JSON-LD `superEvent` の4点で関係を提示。Aboutの説明を「演劇＋音楽の都市型エンターテインメント・フェスティバル」に更新。Hero / About の「2日間」表現は HIBIYA LIVE FESTIVAL 全体（4.25-5.31）と読み取られないよう書き換え |
 | 18 | アーティスト個別ページの自己完結化（開催情報＋アクセス） | 中 | 完了 | 2026-04-30 | 2026-04-30 | Hero の日時・会場サイズアップ、EVENT INFO バナー、VENUE & ACCESS セクション（出演会場ハイライト＋Google Maps リンク）を追加 |
+| 19 | 横濱良太郎(Tb) standards のプロフィール文と写真追加 | 高 | 完了 | 2026-05-05 | 2026-05-05 | desc / 写真（1280×1280）反映、項目11の保留分が1件解消 |
+| 20 | ベース楽器略号を `Bs` → `Ba` に統一 | 中 | 完了 | 2026-05-05 | 2026-05-05 | data/artists.json・index.html（凡例・timetable）一括置換、HTML 再生成 |
 
 ## ステータス凡例
 

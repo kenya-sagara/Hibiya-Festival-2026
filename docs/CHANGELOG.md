@@ -2,6 +2,28 @@
 
 本ファイルは HIBIYA LIVE FESTIVAL 2026 サイトの変更履歴を記録します。
 
+## 2026-05-05
+
+### 追加（横濱良太郎(Tb) standards のプロフィール文と写真）
+
+- **プロフィール文を追加**：「横濱良太郎(Tb) × 伊東寿(P) × 横田健斗(Ba)。それぞれが都内のライブハウスにて精力的に活動を行う。今回はデュークエリントンやセロニアスモンクなどジャズレジェンドの名曲を、お互いの個性をぶつけながら演奏する。」
+  - 提供文の楽器表記「Tb / Pf / Ba」のうち、ピアノは既存サイト規約の `P` に揃え、ベースは新規約 `Ba` に統一（後述の表記変更と整合）
+- **写真を追加**：`assets/artists/yokohama-ryotaro-standards.jpg`（1280×1280、109KB）。`data/artists.json` の `photo` / `photo_width` / `photo_height` を反映
+- 個別ページ `artists/yokohama-ryotaro-standards.html` の Hero とプロフィール、`og:image` / `og:image:width|height`、JSON-LD（MusicGroup / MusicEvent）に同写真と説明文が反映される
+- 索引ページ（`index.html`）の出演者カードもプレースホルダーから写真表示に切り替え
+
+### 変更（ベースの楽器略号を `Bs` → `Ba` に統一）
+
+サイト全体でベース表記を `Bs` から `Ba` に変更。プロフィール文・バンド名・楽器凡例（SCHEDULE 横）まで含めて統一。
+
+- `data/artists.json`：`(Bs)` / `（Bs）` / `Bs ` の全置換
+  - 影響アーティスト：横濱良太郎(Tb)カルテット、Axis Quintet、古川翼(Sax) Quartetto、柴田一輝(Key)、帆足昌太(Ba)、2人ぼっち、後藤天太(Sax) クインテット、豊嶋さおり(Tap) TRIO、TamiKiyo & Friends
+- `index.html`：
+  - 楽器凡例の `<em>Bs</em><span>ベース</span>` → `<em>Ba</em><span>ベース</span>`
+  - 手書き timetable の「柴田一輝(Key)、帆足昌太(Bs)、2人ぼっち」→「(Ba)」
+  - `BEGIN:artists-grid` / `BEGIN:json-ld` 内の表記は `scripts/build.py` 再実行で自動再生成
+- アーティスト個別ページ（HTML）はビルドスクリプトで再生成済み
+
 ## 2026-04-30
 
 ### 修正（Search Console 指摘の構造化データ不足を解消）
