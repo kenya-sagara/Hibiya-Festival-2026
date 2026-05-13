@@ -2,6 +2,32 @@
 
 本ファイルは HIBIYA LIVE FESTIVAL 2026 サイトの変更履歴を記録します。
 
+## 2026-05-06
+
+### 追加（会場別 印刷用 A1/B1 ポスター PDF）
+
+イベント当日に各会場へ掲示する印刷入稿用ポスターを生成。
+
+- **生成スクリプト**：`scripts/gen_posters.py`
+  - `data/artists.json`（SSOT）から各会場のスケジュールを読み込み、会場別に1枚ずつ PDF を出力
+  - 全色 CMYK（process）。背景／タイトル文字／アクセント・QR まで RGB / グレー混在なし
+  - QR コードはベクタ矩形描画（K=100% black）でサイトトップ `https://hibiya-festival.artistmerge.jp/` に遷移
+  - タイムテーブルは利用可能な縦スペースに対して自動フィット（0.55〜1.4 倍）
+  - テーマ切替対応：`white`（デフォルト・採用）／`dark`（サイト同系の濃紺）。CLI: `python scripts/gen_posters.py [venue_slug] [theme]`
+- **採用デザイン（white）**
+  - 地色：温かみのある紙白／本文：濃紺／アクセント：深いアンバーゴールド
+  - 屋外日中・暗所での可読性とコントラストを重視
+- **使用フォント（埋め込み）**
+  - ロゴタイトル：Impact（HIBIYA / LIVE / FESTIVAL）
+  - 出演者名：Yu Mincho Demibold（日本語）+ Times Bold Italic（欧文）の文字単位混植でジャズポスターらしい上品さを表現
+  - 日付・ラベル：Yu Gothic Bold / Impact / Arial
+- **QR サイズ**：B1 = 185mm 角／A1 = 145mm 角（数メートル先からスキャン可）
+- **出力ファイル**（仕上がりサイズ + 塗り足し3mm、トンボなし）
+  - `assets/posters/poster-step-hiroba.pdf` : B1 (728×1030 mm)
+  - `assets/posters/poster-food-hall.pdf` : B1 (728×1030 mm)
+  - `assets/posters/poster-okuroji.pdf` : A1 (594×841 mm)
+- **依存追加**：`reportlab`（PDF 生成）。既存の `qrcode` / `Pillow` を併用
+
 ## 2026-05-05
 
 ### 追加（横濱良太郎(Tb) standards のプロフィール文と写真）

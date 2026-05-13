@@ -14,3 +14,6 @@ memory/
 
 # node (未使用だが予防的に)
 node_modules/
+
+# poster preview thumbnails (regenerable from gen_posters.py)
+assets/posters/_preview/
